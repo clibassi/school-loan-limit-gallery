@@ -1,0 +1,985 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>School Loan Limit Gallery</title>
+<meta name="description" content="Examples of US colleges that set their own lower federal loan limit or lend their own money, each with a highlighted screenshot of the school's page and a source link.">
+<meta name="robots" content="noindex">
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 14px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+</style>
+<style>
+:root{
+  --bg:#f5f6f7;
+  --surface:#ffffff;
+  --text:#1e272e;
+  --muted:#586570;
+  --line:#d8dde2;
+  --accent:#3b5f7c;
+  --accent-soft:#e7edf2;
+  --shot-frame:#ffffff;
+  --scrim:#1e272ecc;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#14181c;
+    --surface:#1b2025;
+    --text:#e2e6e9;
+    --muted:#9aa5ae;
+    --line:#2d353c;
+    --accent:#8fb1cc;
+    --accent-soft:#222b33;
+    --shot-frame:#2a3138;
+    --scrim:#000000cc;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#14181c;
+  --surface:#1b2025;
+  --text:#e2e6e9;
+  --muted:#9aa5ae;
+  --line:#2d353c;
+  --accent:#8fb1cc;
+  --accent-soft:#222b33;
+  --shot-frame:#2a3138;
+  --scrim:#000000cc;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none !important}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+.wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 56px;max-width:1500px;margin-inline:auto}
+a{color:var(--accent);overflow-wrap:anywhere}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:2px}
+h1{font-size:1.75rem;line-height:1.2;margin:0 0 .5rem;font-weight:650}
+h2{font-size:1.2rem;line-height:1.3;margin:0 0 .35rem;font-weight:650}
+h3{font-size:1.15rem;line-height:1.35;margin:0 0 .5rem;font-weight:600}
+.intro{max-width:70ch;margin-bottom:1.25rem}
+.lede{margin:0 0 .75rem;color:var(--text)}
+.intro h2{font-size:1rem;margin-top:1rem}
+.intro ul{margin:.25rem 0 0;padding-left:1.2rem}
+.intro li{margin:.25rem 0}
+.howto summary{cursor:pointer;color:var(--accent)}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding-block:8px;margin-bottom:16px;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}
+.bar .pos{font-variant-numeric:tabular-nums;color:var(--muted);min-width:5.5ch;text-align:center}
+.bar .spacer{flex:1 1 0;min-width:0}
+button,select{font:inherit;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:6px 14px;min-height:40px}
+button{cursor:pointer}
+button:disabled{opacity:.45;cursor:default}
+button:hover:not(:disabled){border-color:var(--accent)}
+.switch{display:inline-flex;align-items:center;gap:8px;min-height:40px}
+.switch input{width:18px;height:18px;accent-color:var(--accent)}
+.layout{display:grid;grid-template-columns:minmax(0,1fr);gap:24px}
+.index{display:none}
+.index-select{display:flex;flex-direction:column;gap:4px;margin-bottom:16px;min-width:0}
+.index-select select{width:100%;min-width:0}
+.index-select label{color:var(--muted);font-size:.9rem}
+@media (min-width:900px){
+  .layout{grid-template-columns:260px minmax(0,1fr);gap:32px}
+  .index{display:block;position:sticky;top:calc(env(safe-area-inset-top,0px) + 72px);align-self:start;max-height:calc(100vh - 96px);overflow:auto;font-size:.9rem;padding-right:8px}
+  .index-select{display:none}
+}
+.index h2{font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin:1rem 0 .3rem;font-weight:600}
+.index h2:first-child{margin-top:0}
+.index ol{list-style:none;margin:0;padding:0}
+.index a{display:block;padding:3px 8px;color:var(--text);text-decoration:none;border-left:2px solid transparent;overflow-wrap:anywhere}
+.index a:hover{background:var(--accent-soft)}
+.index a[aria-current="true"]{border-left-color:var(--accent);background:var(--accent-soft);font-weight:600}
+.group{margin-bottom:40px;min-width:0}
+.group>h2{font-size:1.3rem;padding-bottom:.4rem;border-bottom:1px solid var(--line);margin-bottom:.6rem}
+.group-note{margin:.25rem 0 1rem;color:var(--muted);max-width:70ch}
+.example{padding-block:20px;min-width:0}
+.example+.example{border-top:1px solid var(--line);margin-top:12px}
+.place{margin:0;color:var(--muted);font-size:.95rem}
+.tags{margin:.2rem 0 .6rem;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:2px 16px;font-size:.9rem;font-weight:600;color:var(--accent)}
+.headline{font-size:1.15rem;font-weight:600;margin:0 0 .5rem;max-width:62ch}
+.explain{max-width:68ch;margin:0 0 1rem}
+.facts{display:grid;grid-template-columns:minmax(0,max-content) minmax(0,1fr);gap:4px 16px;margin:0 0 1.25rem;font-size:.95rem;max-width:80ch}
+.facts dt{color:var(--muted)}
+.facts dd{margin:0;min-width:0;overflow-wrap:anywhere}
+@media (max-width:560px){.facts{grid-template-columns:minmax(0,1fr)}.facts dd{margin-bottom:6px}}
+.shot{margin:0 0 .75rem;min-width:0}
+.shot a{display:block;background:var(--shot-frame);border:1px solid var(--line);padding:6px;border-radius:4px;line-height:0}
+.shot img{display:block;width:100%;max-width:100%;height:auto}
+.shot-hint{font-size:.85rem;color:var(--muted);margin:.25rem 0 0}
+blockquote{margin:0 0 1rem;padding:2px 0 2px 14px;border-left:3px solid var(--accent);max-width:80ch;overflow-wrap:anywhere}
+blockquote p{margin:.4rem 0}
+.quote-label{font-size:.85rem;color:var(--muted);margin:0 0 .25rem}
+.find{margin:0 0 1rem;max-width:70ch}
+.source{margin:0 0 1rem;max-width:80ch;overflow-wrap:anywhere}
+.caveats{max-width:70ch;border-left:3px solid var(--line);padding-left:14px}
+.caveats h4{margin:0 0 .2rem;font-size:.95rem}
+.caveats p{margin:0}
+.notshown{margin-top:48px;border-top:1px solid var(--line);padding-top:20px;max-width:90ch}
+.notshown ul{margin:.5rem 0 0;padding-left:1.2rem}
+.notshown li{margin:.5rem 0;overflow-wrap:anywhere}
+.notshown .why{color:var(--muted)}
+dialog{border:1px solid var(--line);background:var(--surface);color:var(--text);padding:12px;max-width:min(96vw,2600px);max-height:96vh;border-radius:6px}
+dialog::backdrop{background:var(--scrim)}
+.dlg-bar{display:flex;justify-content:flex-end;margin-bottom:8px}
+.dlg-body{background:var(--shot-frame);padding:6px;line-height:0;overflow:auto;max-height:calc(96vh - 90px)}
+.dlg-body img{display:block;max-width:100%;height:auto}
+@media (prefers-reduced-motion:no-preference){
+  .index a{transition:background-color .15s}
+}
+#viewer,.example{scroll-margin-top:110px}
+
+.intro{display:grid;grid-template-columns:minmax(0,1fr);gap:12px 40px;max-width:none}
+.intro-main,.intro-find{min-width:0;max-width:70ch}
+.intro-find h2{margin-top:0;font-size:1rem}
+.intro-find ol{margin:.25rem 0 0;padding-left:1.3rem;font-size:.92rem}
+.intro-find li{margin:.3rem 0}
+@media (min-width:900px){.intro{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}.intro-main,.intro-find{max-width:none}}
+.shot a{width:100%}
+dialog{width:fit-content;max-width:96vw}
+.dlg-body{overflow-x:hidden;overflow-y:auto}
+.dlg-body img{width:100%;max-width:100%}
+.wrap{overflow-wrap:anywhere}
+.intro-find ol{font-size:.88rem;line-height:1.45}.intro-find li{margin:.2rem 0}.wrap{padding-block:16px 48px}.bar{margin-bottom:8px}.group>h2{margin-top:0}.example{padding-top:10px}
+.source-note{margin:-.6rem 0 1rem;font-size:.85rem;color:var(--muted);max-width:70ch}
+.index-end{margin-top:1.25rem;padding-top:.75rem;border-top:1px solid var(--line)}
+.index-end a{color:var(--muted);font-style:italic}
+.more-source{margin:0 0 1.25rem;padding-top:1rem;border-top:1px solid var(--line);min-width:0}
+.more-source h4{margin:0 0 .3rem;font-size:1.02rem}
+.more-note{margin:0 0 1rem;max-width:68ch}
+</style>
+</head>
+<body>
+<div class="wrap" id="gallery">
+<header class="intro"><div class="intro-main"><h1>School Loan Limit Gallery</h1><p class="lede">A set of examples of US colleges and programs that set their own lower federal loan limit, or that lend their own money to students. Each example shows the school&#x27;s page with the key sentence highlighted, a plain explanation, and a link to the source. These are examples only; the gallery makes no claim about how common any of this is.</p>
+<details class="howto"><summary>How to read the tags</summary><ul><li>The first two sections separate schools that set a lower limit on their own from schools that say they are doing it because of the court case over which programs count as professional.</li><li>Gives its own reason: the school&#x27;s page explains the limit in terms of borrower protection, debt, cost or similar, without mentioning the court case.</li><li>Gives no reason: the page states a lower figure and says nothing about why.</li><li>Reserves the right and Lower amount by default: the school&#x27;s policy allows a lower limit, or it offers less unless the borrower asks for more.</li><li>Offers the full federal amount and Private lender, no school money are shown for contrast. They are not school-set limits or school lending.</li></ul></details>
+</div>
+<div class="intro-find"><h2>What the examples show</h2><ol class="findings"><li>Four schools set a lower limit without citing the court case. The University of Tennessee Health Science Center gives borrower-protection reasons for limiting seven health programs, although all seven are programs the court case covers.</li><li>The other three are chiropractic colleges that list less than the federal $50,000 a year for new students: Palmer and Northwestern Health Sciences at $20,000 per term, and National University of Health Sciences at $40,000 a year. Each page describes the changes as federal. Only Palmer calls the figure an institutional limit, and a post on its site gives the arithmetic: $20,000 across ten trimesters reaches the $200,000 total at graduation.</li><li>Other chiropractic colleges list the full $50,000, including Cleveland University-Kansas City, whose program has the same structure as Palmer&#x27;s. So the lower figure is a choice, or a misreading, by some schools and not a federal rule.</li><li>Eighteen schools say they are limiting loans because of the court case over which programs count as professional. They hold the affected programs at the graduate limit, usually stated as $20,500 a year.</li><li>Two more, Michigan State University and the University of Oklahoma Health Sciences Center, list $20,500 for such programs on pages dated after the court order, without saying it is a choice.</li><li>School lending is rare. The law schools at the University of Kansas and Washington University in St. Louis are the only two found lending their own money in response to the federal limits. Midwestern University&#x27;s loan predates the law, and three more schools have only announced plans.</li><li>The nine schools that stopped offering federal loans, or one type of federal loan, give their own reasons, mostly student debt or low use. None ties the decision to the 2026 limits, and some decisions predate them.</li></ol></div>
+</header>
+<div class="bar" id="viewer-bar" hidden><button type="button" id="prev-btn">Previous</button><span class="pos" id="position" aria-live="polite"></span><button type="button" id="next-btn">Next</button><span class="spacer"></span><label class="switch" for="show-all"><input type="checkbox" id="show-all"> Show all on one page</label></div>
+<div class="layout">
+<div class="index-col"><div class="index-select" id="index-select-wrap" hidden><label for="index-select">Jump to an example</label><select id="index-select">
+<optgroup label="Schools that set a lower limit on their own"><option value="uthsc-program-limits">University of Tennessee Health Science Center</option><option value="palmer-chiropractic">Palmer College of Chiropractic</option><option value="northwestern-health-sciences-university-dc">Northwestern Health Sciences University</option><option value="national-university-health-sciences-dc">National University of Health Sciences</option></optgroup>
+<optgroup label="Schools that set a lower limit because of the court case"><option value="fgcu-pt-pa">Florida Gulf Coast University</option><option value="south-carolina-at-pt-slp">University of South Carolina</option><option value="elmhurst-msn-dnp">Elmhurst University</option><option value="cu-boulder-audiology">University of Colorado Boulder</option><option value="pacific-university-policy">Pacific University</option><option value="jmu-all-graduate">James Madison University</option><option value="cleveland-state-added-programs">Cleveland State University</option><option value="duke-nursing">Duke University School of Nursing</option><option value="springfield-college">Springfield College</option><option value="touro-injunction-programs">Touro University</option><option value="dayton-pt-pa">University of Dayton</option><option value="vcu-otd">Virginia Commonwealth University</option><option value="auburn-other-professional">Auburn University</option><option value="idaho-state-university">Idaho State University</option><option value="loyola-chicago">Loyola University Chicago</option><option value="loyola-new-orleans">Loyola University New Orleans</option><option value="ohio-university">Ohio University</option><option value="anderson-university-sc">Anderson University (South Carolina)</option></optgroup>
+<optgroup label="Schools listing the lower amount after the court order, without calling it a choice"><option value="msu-nursing-pa">Michigan State University</option><option value="ouhsc-dpt-otd">University of Oklahoma Health Sciences Center</option></optgroup>
+<optgroup label="Schools that reserve the right or package a lower amount"><option value="lsu-parent-plus-default">Louisiana State University</option><option value="ku-limit-or-refuse">University of Kansas</option><option value="grand-valley-state">Grand Valley State University</option></optgroup>
+<optgroup label="Schools that stopped offering federal loans or a loan type"><option value="asbury-seminary">Asbury Theological Seminary</option><option value="nash-cc">Nash Community College</option><option value="edgecombe-cc">Edgecombe Community College</option><option value="brazosport-college">Brazosport College</option><option value="glendale-cc-parent-plus">Glendale Community College (California)</option><option value="sum-bible-college">SUM Bible College and Theological Seminary</option><option value="bethany-seminary">Bethany Theological Seminary</option><option value="san-bernardino-valley-parent-plus">San Bernardino Valley College</option><option value="pitt-cc">Pitt Community College</option></optgroup>
+<optgroup label="Schools lending their own money"><option value="ku-law-j-helps">University of Kansas School of Law</option><option value="washu-law-supplemental-loan">Washington University in St. Louis School of Law</option><option value="midwestern-mwu-loan">Midwestern University</option><option value="saint-louis-university-stopgap">Saint Louis University</option><option value="uc-davis-dnp-na-forgivable-loan">UC Davis Health, Betty Irene Moore School of Nursing</option></optgroup>
+<optgroup label="Schools that announced a loan of their own, not yet running"><option value="university-of-florida-expanding-loan">University of Florida</option><option value="yale-sph-own-loan-option">Yale School of Public Health (Yale University)</option><option value="xavier-com-private-loan-option">Xavier University College of Osteopathic Medicine</option></optgroup>
+<optgroup label="For comparison: schools with no lower limit and no loan of their own"><option value="molloy-full-amount">Molloy University</option><option value="arizona-temporary-professional">University of Arizona</option><option value="shasta-college-no-limit">Shasta College</option><option value="parker-university-chiropractic">Parker University</option><option value="yale-sofi-loan-option">Yale University (graduate and professional students)</option><option value="vcom-south-carolina-student-loan">Edward Via College of Osteopathic Medicine (VCOM)</option><option value="cleveland-university-kc-dc">Cleveland University-Kansas City</option></optgroup>
+<option value="not-shown">Checked and not shown</option>
+</select></div>
+<nav class="index" aria-label="All examples">
+<h2>Schools that set a lower limit on their own</h2><ol><li><a href="#uthsc-program-limits" data-id="uthsc-program-limits">University of Tennessee Health Science Center</a></li><li><a href="#palmer-chiropractic" data-id="palmer-chiropractic">Palmer College of Chiropractic</a></li><li><a href="#northwestern-health-sciences-university-dc" data-id="northwestern-health-sciences-university-dc">Northwestern Health Sciences University</a></li><li><a href="#national-university-health-sciences-dc" data-id="national-university-health-sciences-dc">National University of Health Sciences</a></li></ol>
+<h2>Schools that set a lower limit because of the court case</h2><ol><li><a href="#fgcu-pt-pa" data-id="fgcu-pt-pa">Florida Gulf Coast University</a></li><li><a href="#south-carolina-at-pt-slp" data-id="south-carolina-at-pt-slp">University of South Carolina</a></li><li><a href="#elmhurst-msn-dnp" data-id="elmhurst-msn-dnp">Elmhurst University</a></li><li><a href="#cu-boulder-audiology" data-id="cu-boulder-audiology">University of Colorado Boulder</a></li><li><a href="#pacific-university-policy" data-id="pacific-university-policy">Pacific University</a></li><li><a href="#jmu-all-graduate" data-id="jmu-all-graduate">James Madison University</a></li><li><a href="#cleveland-state-added-programs" data-id="cleveland-state-added-programs">Cleveland State University</a></li><li><a href="#duke-nursing" data-id="duke-nursing">Duke University School of Nursing</a></li><li><a href="#springfield-college" data-id="springfield-college">Springfield College</a></li><li><a href="#touro-injunction-programs" data-id="touro-injunction-programs">Touro University</a></li><li><a href="#dayton-pt-pa" data-id="dayton-pt-pa">University of Dayton</a></li><li><a href="#vcu-otd" data-id="vcu-otd">Virginia Commonwealth University</a></li><li><a href="#auburn-other-professional" data-id="auburn-other-professional">Auburn University</a></li><li><a href="#idaho-state-university" data-id="idaho-state-university">Idaho State University</a></li><li><a href="#loyola-chicago" data-id="loyola-chicago">Loyola University Chicago</a></li><li><a href="#loyola-new-orleans" data-id="loyola-new-orleans">Loyola University New Orleans</a></li><li><a href="#ohio-university" data-id="ohio-university">Ohio University</a></li><li><a href="#anderson-university-sc" data-id="anderson-university-sc">Anderson University (South Carolina)</a></li></ol>
+<h2>Schools listing the lower amount after the court order, without calling it a choice</h2><ol><li><a href="#msu-nursing-pa" data-id="msu-nursing-pa">Michigan State University</a></li><li><a href="#ouhsc-dpt-otd" data-id="ouhsc-dpt-otd">University of Oklahoma Health Sciences Center</a></li></ol>
+<h2>Schools that reserve the right or package a lower amount</h2><ol><li><a href="#lsu-parent-plus-default" data-id="lsu-parent-plus-default">Louisiana State University</a></li><li><a href="#ku-limit-or-refuse" data-id="ku-limit-or-refuse">University of Kansas</a></li><li><a href="#grand-valley-state" data-id="grand-valley-state">Grand Valley State University</a></li></ol>
+<h2>Schools that stopped offering federal loans or a loan type</h2><ol><li><a href="#asbury-seminary" data-id="asbury-seminary">Asbury Theological Seminary</a></li><li><a href="#nash-cc" data-id="nash-cc">Nash Community College</a></li><li><a href="#edgecombe-cc" data-id="edgecombe-cc">Edgecombe Community College</a></li><li><a href="#brazosport-college" data-id="brazosport-college">Brazosport College</a></li><li><a href="#glendale-cc-parent-plus" data-id="glendale-cc-parent-plus">Glendale Community College (California)</a></li><li><a href="#sum-bible-college" data-id="sum-bible-college">SUM Bible College and Theological Seminary</a></li><li><a href="#bethany-seminary" data-id="bethany-seminary">Bethany Theological Seminary</a></li><li><a href="#san-bernardino-valley-parent-plus" data-id="san-bernardino-valley-parent-plus">San Bernardino Valley College</a></li><li><a href="#pitt-cc" data-id="pitt-cc">Pitt Community College</a></li></ol>
+<h2>Schools lending their own money</h2><ol><li><a href="#ku-law-j-helps" data-id="ku-law-j-helps">University of Kansas School of Law</a></li><li><a href="#washu-law-supplemental-loan" data-id="washu-law-supplemental-loan">Washington University in St. Louis School of Law</a></li><li><a href="#midwestern-mwu-loan" data-id="midwestern-mwu-loan">Midwestern University</a></li><li><a href="#saint-louis-university-stopgap" data-id="saint-louis-university-stopgap">Saint Louis University</a></li><li><a href="#uc-davis-dnp-na-forgivable-loan" data-id="uc-davis-dnp-na-forgivable-loan">UC Davis Health, Betty Irene Moore School of Nursing</a></li></ol>
+<h2>Schools that announced a loan of their own, not yet running</h2><ol><li><a href="#university-of-florida-expanding-loan" data-id="university-of-florida-expanding-loan">University of Florida</a></li><li><a href="#yale-sph-own-loan-option" data-id="yale-sph-own-loan-option">Yale School of Public Health (Yale University)</a></li><li><a href="#xavier-com-private-loan-option" data-id="xavier-com-private-loan-option">Xavier University College of Osteopathic Medicine</a></li></ol>
+<h2>For comparison: schools with no lower limit and no loan of their own</h2><ol><li><a href="#molloy-full-amount" data-id="molloy-full-amount">Molloy University</a></li><li><a href="#arizona-temporary-professional" data-id="arizona-temporary-professional">University of Arizona</a></li><li><a href="#shasta-college-no-limit" data-id="shasta-college-no-limit">Shasta College</a></li><li><a href="#parker-university-chiropractic" data-id="parker-university-chiropractic">Parker University</a></li><li><a href="#yale-sofi-loan-option" data-id="yale-sofi-loan-option">Yale University (graduate and professional students)</a></li><li><a href="#vcom-south-carolina-student-loan" data-id="vcom-south-carolina-student-loan">Edward Via College of Osteopathic Medicine (VCOM)</a></li><li><a href="#cleveland-university-kc-dc" data-id="cleveland-university-kc-dc">Cleveland University-Kansas City</a></li></ol>
+<div class="index-end"><a href="#not-shown" data-id="not-shown">Checked and not shown</a></div>
+</nav></div>
+<main id="viewer">
+<section class="group" id="section-limits-own" aria-labelledby="section-limits-own-h"><h2 id="section-limits-own-h">Schools that set a lower limit on their own</h2>
+<p class="group-note">These schools do not cite the court case. One gives borrower-protection reasons; the others state a lower figure and give no reason.</p>
+<article class="example" id="uthsc-program-limits" aria-labelledby="uthsc-program-limits-h">
+<h3 id="uthsc-program-limits-h">University of Tennessee Health Science Center, Tennessee</h3>
+<ul class="tags"><li>Gives its own reason</li></ul>
+<p class="headline">UT Health Science Center sets program-specific loan limits below federal maximums for seven health programs.</p>
+<p class="explain">The financial aid office says students in seven designated health programs cannot borrow the maximum annual or total federal loan amounts. It says such limits are meant to encourage responsible borrowing, reduce excessive debt and keep loans in line with reasonable program costs. The page does not give a dollar figure.</p>
+<figure class="shot"><a class="shot-link" style="max-width:1182px" href="shots/uthsc-program-limits.png" aria-label="Open the screenshot larger"><img src="shots/uthsc-program-limits.png" width="2336" height="730" alt="Screenshot of the source page. UT Health Science Center sets program-specific loan limits below federal maximums for seven health programs."></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>The establishment of program-specific loan limits means that students will not be eligible to borrow the maximum annual or aggregate loan amounts otherwise available under federal loan programs.</p><p>The academic programs that are affected by this decision are:</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>Audiology (AuD); Physician Assistant (PA); Occupational Therapy/Therapist (MOT; OTD); Physical Therapy (PT; DPT); Speech-Language Pathology/Pathologist (SLP); Nursing Anesthetist (DNAP); Nurse Practice (DNP)</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.uthsc.edu/financial-aid/federal-aid-updates.php#:~:text=The%20establishment%20of%20program%2Dspecific%20loan%20limits%20means%20that%20students%20will%20not%20be%20eligible%20to%20borrow%20the%20maximum%20annual%20or%20aggregate%20loan%20amounts%20otherwise%20available%20under%20federal%20loan%20programs." target="_blank" rel="noopener">Federal Aid Updates | Financial Aid | UTHSC (opens at the highlighted sentence)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>Page opens with &quot;reserves the right to establish and administer loan limits&quot;, so it could be read as reserves-the-right; the list of affected programs and the statement that students &quot;will not be eligible&quot; support limit in force. No dollar amount. Page also says limits will be reviewed periodically and may be revised, suspended or discontinued. Page undated. A separate collapsed section on the page lists related programs (e.g. Audiology and Speech Pathology BSASP, Speech and Hearing Science PhD) in what looks like other content; not part of this list. Screenshot shows the first four of the seven programs; all seven are in the list on the page.</p></div>
+</article>
+<article class="example" id="palmer-chiropractic" aria-labelledby="palmer-chiropractic-h">
+<h3 id="palmer-chiropractic-h">Palmer College of Chiropractic, Iowa and Florida</h3>
+<ul class="tags"><li>Gives no reason</li></ul>
+<p class="headline">Palmer lists a $20,000-per-term institutional loan limit for Doctor of Chiropractic students.</p>
+<p class="explain">Palmer College of Chiropractic lists an &quot;Institutional Loan Limit&quot; of $20,000 per term for new students in its Doctor of Chiropractic program, alongside a $200,000 lifetime limit. Palmer counts two trimesters as an academic year, so that is $40,000 a year against a federal limit of $50,000. The loan-changes page gives no reason and describes the changes as federal rules that apply nationwide. A second page on Palmer&#x27;s site, shown below, gives the arithmetic.</p>
+<figure class="shot"><a class="shot-link" style="max-width:872px" href="shots/palmer-chiropractic.png" aria-label="Open the screenshot larger"><img src="shots/palmer-chiropractic.png" width="1716" height="1156" alt="Screenshot of the source page. Palmer lists a $20,000-per-term institutional loan limit for Doctor of Chiropractic students." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>Institutional Loan Limit: $20,000 (per term)</p></blockquote>
+<p class="find"><strong>How to see it on the page:</strong> Click the panel headed &quot;Professional Student Changes&quot;.</p>
+<dl class="facts"><dt>Programs covered</dt><dd>Professional students (Doctor of Chiropractic Program)</dd><dt>Amount or terms</dt><dd>Institutional Loan Limit: $20,000 (per term); Lifetime Limit: $200,000</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.palmer.edu/federal-student-loan-changes-for-2026-2027/" target="_blank" rel="noopener">Federal Student Loan Changes for 2026-2027 - Palmer College of Chiropractic (opens the page; the sentence is inside a collapsed section, see above)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<div class="more-source"><h4>Palmer&#x27;s own arithmetic, from a post on its site</h4><p class="more-note">A separate post on Palmer&#x27;s site, dated August 20, 2026, works through the numbers: at $20,000 a trimester, a student reaches the $200,000 total exactly when the ten-trimester program ends. The post does not say Palmer chose $20,000 for that reason.</p>
+<figure class="shot"><a class="shot-link" style="max-width:990px" href="shots/palmer-pacing-explanation.png" aria-label="Open the screenshot larger"><img src="shots/palmer-pacing-explanation.png" width="1952" height="838" alt="Screenshot of the second source page. Palmer&#x27;s own arithmetic, from a post on its site" loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p><blockquote><p>For a D.C. student borrowing $20,000 per trimester across a full 10-trimester program, you would reach the aggregate limit at program completion.</p></blockquote>
+<dl class="facts"><dt>Date on the page</dt><dd>Posted on August 20, 2026</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.palmer.edu/palmer-blog/federal-loan-limits-for-d-c-students-understanding-your-annual-aggregate-and-lifetime-borrowing-capacity/#:~:text=For%20a%20D.C.%20student%20borrowing%20%2420%2C000%20per%20trimester%20across%20a%20full%2010%2Dtrimester%20program%2C%20you%20would%20reach%20the%20aggregate%20limit%20at%20program%20completion." target="_blank" rel="noopener">Federal Loan Limits for D.C. Students: Understanding Your Annual, Aggregate, and Lifetime Borrowing Capacity - Palmer College of Chiropractic (opens at the highlighted sentence)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+</div>
+<div class="caveats"><h4>Caveats</h4><p>Same page says: &quot;These updates reflect new federal borrowing rules for graduate and professional students. It is important to emphasize: these updates are federal in scope and apply to institutions nationwide; they are not specific to Palmer.&quot; So the page does not clearly say Palmer chose this limit; it labels it &quot;Institutional Loan Limit&quot; but frames the changes as federal. Page is undated. Sentence is in a collapsed panel (tool opened it); the page shows the figure as a bullet, not a full sentence. The panel was closed on load; the tool clicked &quot;Professional Student Changes&quot; to show it, so a visitor must click that panel. The second source is a blog post on the school&#x27;s site. It attributes the limits to the federal law and states the arithmetic, but it does not literally say that Palmer set $20,000 so that the total would last the whole program.</p></div>
+</article>
+<article class="example" id="northwestern-health-sciences-university-dc" aria-labelledby="northwestern-health-sciences-university-dc-h">
+<h3 id="northwestern-health-sciences-university-dc-h">Northwestern Health Sciences University, Minnesota</h3>
+<ul class="tags"><li>Gives no reason</li></ul>
+<p class="headline">Northwestern Health Sciences lists $20,000 per term in unsubsidized loans for new chiropractic students.</p>
+<p class="explain">The school lists $20,000 per term for new Doctor of Chiropractic students. The page never says how many terms make up its academic year; the school&#x27;s own old figure of $16,500 per term is half of the former $33,000 yearly figure, which points to two terms, so the project reads it as $40,000 a year against a federal limit of $50,000. The page gives no reason and says the changes are federal requirements that are not specific to the university.</p>
+<figure class="shot"><a class="shot-link" style="max-width:832px" href="shots/northwestern-health-sciences-university-dc.png" aria-label="Open the screenshot larger"><img src="shots/northwestern-health-sciences-university-dc.png" width="1636" height="1760" alt="Screenshot of the source page. Northwestern Health Sciences lists $20,000 per term in unsubsidized loans for new chiropractic students." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>Doctor of Chiropractic Program: $20,000 per term</p><p>Unsubsidized Loan: $16,500 per term</p></blockquote>
+<p class="find"><strong>How to see it on the page:</strong> Click the panel headed &quot;New Borrowing Limits&quot; (the legacy figure is under &quot;Legacy Borrowing Benefits&quot;).</p>
+<dl class="facts"><dt>Programs covered</dt><dd>Doctor of Chiropractic Program (professional student)</dd><dt>Amount or terms</dt><dd>Doctor of Chiropractic Program: $20,000 per term (Unsubsidized Loan, new limits effective July 1, 2026); Professional Programs (Chiropractic) aggregate $200,000</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.nwhealth.edu/financial-aid/federal-student-loan-changes/" target="_blank" rel="noopener">Federal Student Loan Changes | Northwestern Health Sciences University (opens the page; the sentence is inside a collapsed section, see above)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<div class="caveats"><h4>Caveats</h4><p>SCHOOL&#x27;S WORDS: &#x27;$20,000 per term&#x27;, &#x27;Other Graduate Programs: $10,250 per term&#x27;, legacy &#x27;Unsubsidized Loan: $16,500 per term&#x27;, and &#x27;These updates are federal requirements and apply to all institutions; they are not specific to Northwestern Health Sciences University.&#x27; THIS PROJECT&#x27;S ARITHMETIC: two terms per academic year is inferred, not stated: $16,500 x 2 = $33,000 (the old federal annual figure) and $10,250 x 2 = $20,500; $20,000 x 2 = $40,000. No page on www.nwhealth.edu defines the academic year (the catalog host nwhealth.smartcatalogiq.com is blocked); the student-loans page says only that a (private) loan &#x27;will be split evenly between two trimesters&#x27;, and the program is year-round with three start dates, so if the year were three terms the figure would be $60,000, above the federal limit. Treat &#x27;limit in force&#x27; as provisional. The page frames the figures as federal, so whether the school set the $20,000 itself is not stated.</p></div>
+</article>
+<article class="example" id="national-university-health-sciences-dc" aria-labelledby="national-university-health-sciences-dc-h">
+<h3 id="national-university-health-sciences-dc-h">National University of Health Sciences, Illinois and Florida</h3>
+<ul class="tags"><li>Gives no reason</li></ul>
+<p class="headline">National University of Health Sciences lists up to $40,000 a year for new chiropractic medicine students.</p>
+<p class="explain">Under the heading &#x27;What are the new federal loan limits?&#x27; the school lists up to $40,000 per year for its Chiropractic Medicine students, with a $200,000 professional lifetime limit. The federal professional limit is $50,000 a year, so the stated figure is $10,000 lower. The page gives no reason for the lower figure.</p>
+<figure class="shot"><a class="shot-link" style="max-width:996px" href="shots/national-university-health-sciences-dc.png" aria-label="Open the screenshot larger"><img src="shots/national-university-health-sciences-dc.png" width="1964" height="680" alt="Screenshot of the source page. National University of Health Sciences lists up to $40,000 a year for new chiropractic medicine students." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>Professional Students (Chiropractic Medicine program): Up to $40,000 per year with a total lifetime limit of $200,000 for professional-level borrowing.</p></blockquote>
+<p class="find"><strong>How to see it on the page:</strong> Click the panel &quot;Loan Programs and Limits&quot; and read the question &quot;What are the new federal loan limits?&quot;.</p>
+<dl class="facts"><dt>Programs covered</dt><dd>Professional students (Chiropractic Medicine program)</dd><dt>Amount or terms</dt><dd>Professional Students (Chiropractic Medicine program): Up to $40,000 per year with a total lifetime limit of $200,000 for professional-level borrowing.</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.nuhs.edu/financial-aid/federal-student-aid-policy" target="_blank" rel="noopener">Federal Student Aid Policy Updates | National University Of Health Sciences (opens the page; the sentence is inside a collapsed section, see above)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<div class="caveats"><h4>Caveats</h4><p>SCHOOL&#x27;S WORDS: &#x27;Up to $40,000 per year&#x27; (the page says &#x27;per year&#x27;, not &#x27;per academic year&#x27;). No arithmetic by this project. The page presents the figures as &#x27;the new federal loan limits&#x27; and says the chiropractic program &#x27;will retain its professional classification&#x27;, yet $40,000 is below the $50,000 federal figure; it may be a school-set limit, a carried-over old figure or an error, and the page does not say. Page is undated apart from &#x27;Starting July 1, 2026&#x27; and an FAQ about 2025-2026. The pages read do not define terms per academic year (calendar shows three trimesters a year).</p></div>
+</article>
+</section>
+<section class="group" id="section-limits-court" aria-labelledby="section-limits-court-h"><h2 id="section-limits-court-h">Schools that set a lower limit because of the court case</h2>
+<p class="group-note">These schools say they are holding programs at the graduate limit while the lawsuit over which programs count as professional is unresolved.</p>
+<article class="example" id="fgcu-pt-pa" aria-labelledby="fgcu-pt-pa-h">
+<h3 id="fgcu-pt-pa-h">Florida Gulf Coast University, Florida</h3>
+<p class="headline">Florida Gulf Coast holds ten listed graduate programs at $20,500 a year instead of the temporary $50,000.</p>
+<p class="explain">For 2026-27 FGCU will not award Direct Unsubsidized Loans up to the temporary $50,000 professional maximum for the programs it lists, and caps them at $20,500 a year. It says this is an interim limit to avoid disruption to borrowers if the federal classification changes during the court case. It will reevaluate if federal requirements change.</p>
+<figure class="shot"><a class="shot-link" style="max-width:1294px" href="shots/fgcu-pt-pa.png" aria-label="Open the screenshot larger"><img src="shots/fgcu-pt-pa.png" width="2560" height="735" alt="Screenshot of the source page. Florida Gulf Coast holds ten listed graduate programs at $20,500 a year instead of the temporary $50,000." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>For the 2026–27 award year, FGCU has established a maximum annual institutional Direct Unsubsidized Loan limit of $20,500 for the programs listed above.</p><p>FGCU is establishing this interim limit to mitigate potential disruption to student borrowers that could result if the federal classification of these programs changes during the ongoing litigation.</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>Programs the page lists as temporarily treated as professional; page lists: BSN to DNP Nurse Anesthesiology, BSN to DNP Nurse Practitioner, MSN to DNP, MSN to DNP Nurse Anesthesiology (all D.N.P.); Nurse Educator (M.S.N.); Nursing Leadership &amp; Management (M.S.N.); Occupational Therapy (M.S.); Physical Therapy (D.P.T.); Physical Therapy-Transitional (D.P.T.); Physician Assistant Studies (M.P.A.S.)</dd><dt>Amount or terms</dt><dd>$20,500 maximum annual institutional Direct Unsubsidized Loan limit for 2026-27, instead of the temporary $50,000 professional maximum</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.fgcu.edu/admissionsandaid/financialaid/graduate/typesofaid/loans#:~:text=For%20the%202026%E2%80%9327%20award%20year%2C%20FGCU%20has%20established%20a%20maximum%20annual%20institutional%20Direct%20Unsubsidized%20Loan%20limit%20of%20%2420%2C500%20for%20the%20programs%20listed%20above." target="_blank" rel="noopener">Loans for Graduate (opens at the highlighted sentence)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>I confirmed the ten entries appear in the page text under the borrowing-limits heading but did not separately confirm the exact boundary of the list &quot;above&quot; the limit sentence. Page undated. Screenshot frame does not include the section heading or the program list. Court case referred to only as &quot;ongoing litigation&quot; and a June 24, 2026 D.C. court stay in the paragraph above. The page&#x27;s fixed MENU button sits over the first characters of the heading &quot;2026-27 Institutional Loan Limit&quot;; the highlighted text is not covered. Three attempts at different widths and heights did not move it.</p></div>
+</article>
+<article class="example" id="south-carolina-at-pt-slp" aria-labelledby="south-carolina-at-pt-slp-h">
+<h3 id="south-carolina-at-pt-slp-h">University of South Carolina, South Carolina</h3>
+<p class="headline">South Carolina keeps six programs at the $20,500 annual loan limit because of pending court decisions.</p>
+<p class="explain">The university says that because of pending court decisions, annual loan limits will stay at $20,500 for the programs it lists for the academic year. The page ties this to the June 24, 2026 court stay of the professional-degree definition.</p>
+<figure class="shot"><a class="shot-link" style="max-width:871px" href="shots/south-carolina-at-pt-slp.png" aria-label="Open the screenshot larger"><img src="shots/south-carolina-at-pt-slp.png" width="1714" height="932" alt="Screenshot of the source page. South Carolina keeps six programs at the $20,500 annual loan limit because of pending court decisions." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>Due to pending Court decisions, the annual loan limits will remain at $20,500 for the following programs of study for the academic year:</p></blockquote>
+<p class="find"><strong>How to see it on the page:</strong> Click the question &quot;What are institutionally determined loan limits?&quot;.</p>
+<dl class="facts"><dt>Programs covered</dt><dd>Athletic Training (510913); Physical Therapy (513208); Speech-Language Pathology (510203); Physician Assistant Studies (510912); Critical Incident Management &amp; PC in AT (510913); Master&#x27;s Entry to Practice Nursing (513801)</dd><dt>Amount or terms</dt><dd>$20,500 annual loan limit</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://sc.edu/about/offices_and_divisions/financial_aid/loans/obbba/" target="_blank" rel="noopener">One Big Beautiful Bill Act - Financial Aid and Scholarships | University of South Carolina (opens the page; the sentence is inside a collapsed section, see above)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<div class="caveats"><h4>Caveats</h4><p>Page undated; &quot;the academic year&quot; is not named in the sentence. Screenshot shows the first four list items cut off at the frame edge; all six are on the page. The answer was in a collapsed panel that the tool opened by clicking the question; a visitor must click it. Screenshot retaken; the list under the highlighted sentence is cut by the frame bottom (four of six items visible).</p></div>
+</article>
+<article class="example" id="elmhurst-msn-dnp" aria-labelledby="elmhurst-msn-dnp-h">
+<h3 id="elmhurst-msn-dnp-h">Elmhurst University, Illinois</h3>
+<p class="headline">Elmhurst keeps nursing master&#x27;s and doctoral students at the $20,500 annual federal loan limit.</p>
+<p class="explain">The Education Department is temporarily treating some nursing programs as professional because of a lawsuit. Elmhurst says that because this may change, it will keep applying the $20,500 annual limit to MSN and DNP students for now, to reduce the risk of disruption if federal guidance changes.</p>
+<figure class="shot"><a class="shot-link" style="max-width:836px" href="shots/elmhurst-msn-dnp.png" aria-label="Open the screenshot larger"><img src="shots/elmhurst-msn-dnp.png" width="1644" height="924" alt="Screenshot of the source page. Elmhurst keeps nursing master&#x27;s and doctoral students at the $20,500 annual federal loan limit." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>Because this designation is temporary and may change as the litigation proceeds, the University will continue to apply the $20,500 annual Direct Unsubsidized Loan limit to MSN and DNP students at this time.</p><p>Due to ongoing federal litigation, the U.S. Department of Education is temporarily treating certain programs, including qualifying Master of Science in Nursing (MSN) and Doctor of Nursing Practice (DNP) programs, as professional degree programs eligible for higher federal loan limits.</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>Master of Science in Nursing (MSN) and Doctor of Nursing Practice (DNP) students</dd><dt>Amount or terms</dt><dd>$20,500 annual Direct Unsubsidized Loan limit</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.elmhurst.edu/admission/financial-aid/types-aid/loans/2627updates/#:~:text=Because%20this%20designation%20is%20temporary%20and%20may%20change%20as%20the%20litigation%20proceeds%2C%20the%20University%20will%20continue%20to%20apply%20the%20%2420%2C500%20annual%20Direct%20Unsubsidized%20Loan%20limit%20to%20MSN%20and%20DNP%20students%20at%20this%20time." target="_blank" rel="noopener">Federal Student Aid Changes for 2026–2027 | Elmhurst University (opens at the highlighted sentence)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>Page undated. Court case is referred to only as &quot;ongoing federal litigation&quot;.</p></div>
+</article>
+<article class="example" id="cu-boulder-audiology" aria-labelledby="cu-boulder-audiology-h">
+<h3 id="cu-boulder-audiology-h">University of Colorado Boulder, Colorado</h3>
+<p class="headline">CU Boulder caps audiology students at $20,500 a year and $100,000 total until the courts decide.</p>
+<p class="explain">CU Boulder says federal limits classify audiology as a graduate program and a lawsuit seeks to restore its professional status. Until the courts decide, it is keeping audiology borrowing at the graduate limits, which it says will help more students have federal loan access for the whole program either way.</p>
+<figure class="shot"><a class="shot-link" style="max-width:1138px" href="shots/cu-boulder-audiology.png" aria-label="Open the screenshot larger"><img src="shots/cu-boulder-audiology.png" width="2248" height="750" alt="Screenshot of the source page. CU Boulder caps audiology students at $20,500 a year and $100,000 total until the courts decide." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>CU Boulder has decided it’s in the best interest of our audiology students&#x27; long-term success to keep borrowing capped at $20,500 each school year and $100,000 total until the courts decide how to classify your program.</p><p>Recent legal action, including a lawsuit co-filed by Colorado’s attorney general, challenges the legislation to reclassify audiology back to a professional program.</p></blockquote>
+<p class="find"><strong>How to see it on the page:</strong> Click the section headed &quot;Audiology students&quot;.</p>
+<dl class="facts"><dt>Programs covered</dt><dd>Doctorate of Audiology (AuD) students</dd><dt>Amount or terms</dt><dd>$20,500 each school year and $100,000 total</dd><dt>Date on the page</dt><dd>2026-11-02</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.colorado.edu/financialaid/2026/11/02/new-federal-student-loan-limits" target="_blank" rel="noopener">New federal student loan limits | Office of Financial Aid | University of Colorado Boulder (opens the page; the sentence is inside a collapsed section, see above)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<div class="caveats"><h4>Caveats</h4><p>Text sits in a collapsed section on a page that also covers legacy status and other loan changes. The audiology limit appears under the heading &quot;What happens if you lose legacy status?&quot; in the find output. The text was in a collapsed section that the tool opened by clicking &quot;Audiology students&quot;; a visitor must click it.</p></div>
+</article>
+<article class="example" id="pacific-university-policy" aria-labelledby="pacific-university-policy-h">
+<h3 id="pacific-university-policy-h">Pacific University, Oregon</h3>
+<p class="headline">Pacific University has a written policy setting loan caps for programs temporarily treated as professional.</p>
+<p class="explain">Pacific University&#x27;s policy sets its own institutional loan caps for programs that the Education Department is temporarily treating as professional under a June 2026 court stay. The page says the aim is to protect borrowers from sudden mid-cycle disruption. Dollar caps and program names are in a linked full policy.</p>
+<figure class="shot"><a class="shot-link" style="max-width:1294px" href="shots/pacific-university-policy.png" aria-label="Open the screenshot larger"><img src="shots/pacific-university-policy.png" width="2560" height="1208" alt="Screenshot of the source page. Pacific University has a written policy setting loan caps for programs temporarily treated as professional." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>This policy establishes institutional loan caps for academic programs that have been granted Temporary Professional Status under the June 2026 federal court stay in the ongoing litigation against the U.S. Department of Education.</p><p>To insulate student borrowers from sudden mid-cycle financial disruptions and mitigate systemic institutional liability</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>Academic programs granted Temporary Professional Status under the June 2026 federal court stay (not named on this page)</dd><dt>Date on the page</dt><dd>Date Approved: Tuesday, July 28, 2026 (policy POL-FNA4401)</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.pacificu.edu/node/59152#:~:text=This%20policy%20establishes%20institutional%20loan%20caps%20for%20academic%20programs%20that%20have%20been%20granted%20Temporary%20Professional%20Status%20under%20the%20June%202026%20federal%20court%20stay%20in%20the%20ongoing%20litigation%20against%20the%20U.S.%20Department%20of%20Education." target="_blank" rel="noopener">Institutional Loan Limit Policy: Programs Granted Temporary Professional Status | Pacific University (opens at the highlighted sentence)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>Page is a summary; dollar caps and programs are in a linked policy document not captured. It says policy &quot;establishes institutional loan caps&quot; but states no cap figure. The first retake cut the heading at the left edge; the retake at width 1280 shows it whole.</p></div>
+</article>
+<article class="example" id="jmu-all-graduate" aria-labelledby="jmu-all-graduate-h">
+<h3 id="jmu-all-graduate-h">James Madison University, Virginia</h3>
+<p class="headline">James Madison holds its graduate programs at a $20,500 annual federal loan limit despite the $50,000 court-stay limit.</p>
+<p class="explain">JMU says it is setting the limit at $20,500 for programs that the court order lets borrow up to $50,000. Its stated main reason is that the court order is preliminary and could be reversed, which could leave students who borrowed $50,000 in a difficult position.</p>
+<figure class="shot"><a class="shot-link" style="max-width:877px" href="shots/jmu-all-graduate.png" aria-label="Open the screenshot larger"><img src="shots/jmu-all-graduate.png" width="1726" height="525" alt="Screenshot of the source page. James Madison holds its graduate programs at a $20,500 annual federal loan limit despite the $50,000 court-stay limit." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>This means all JMU graduate, professional, and doctoral programs have a $20,500 maximum annual limit for the Federal Direct Unsubsidized Loan.</p><p>The primary reason for this decision is that the court order is preliminary and temporary, meaning it could be reversed</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>All JMU graduate, professional and doctoral programs, except the Clinical Psychology Psy.D. (per FAQ on the page); JMU programs added by the court order include Audiology (AuD), Speech Language Pathology, Physician Assistant, Occupational Therapy</dd><dt>Amount or terms</dt><dd>$20,500 maximum annual limit for the Federal Direct Unsubsidized Loan, rather than $50,000</dd><dt>Date on the page</dt><dd>November 16, 2026</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.jmu.edu/financialaid/newsletters/federal_updates/obbba/obbba-gr-direct-loans.shtml#:~:text=This%20means%20all%20JMU%20graduate%2C%20professional%2C%20and%20doctoral%20programs%20have%20a%20%2420%2C500%20maximum%20annual%20limit%20for%20the%20Federal%20Direct%20Unsubsidized%20Loan." target="_blank" rel="noopener">Graduate Direct Loan Updates - JMU (opens at the highlighted sentence)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>Psy.D. exception is in a collapsed FAQ. The AANP v. McMahon case name did not appear in my keyword search of the page text. The screenshot shows no heading. The frame shows the paragraph without a section heading; no heading lies within range above it.</p></div>
+</article>
+<article class="example" id="cleveland-state-added-programs" aria-labelledby="cleveland-state-added-programs-h">
+<h3 id="cleveland-state-added-programs-h">Cleveland State University, Ohio</h3>
+<p class="headline">Cleveland State is holding programs newly added to the interim professional list at the $20,500 graduate limit.</p>
+<p class="explain">Cleveland State&#x27;s financial aid office is certifying students in majors newly added to the federal interim professional-degree list at the standard graduate limit of $20,500 a year, not the $50,000 professional limit. The document says the list comes from a preliminary court order and is not final, and that a reversal could leave students at or over the $100,000 graduate aggregate with no Grad PLUS loan to fill the gap. It says the office will move to the higher limit once the classification is final.</p>
+<figure class="shot"><a class="shot-link" style="max-width:481px" href="shots/cleveland-state-added-programs.png" aria-label="Open the screenshot larger"><img src="shots/cleveland-state-added-programs.png" width="935" height="525" alt="Screenshot of the source page. Cleveland State is holding programs newly added to the interim professional list at the $20,500 graduate limit." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>The Cleveland State Financial Aid Office is currently certifying the newly added CIP code major students at the standard graduate loan limit ($20,500/year, $100,000 aggregate) rather than the higher professional limit ($50,000/year, $200,000 aggregate), even though the programs have been added to the Department of Education’s (Department) interim professional degree list.</p></blockquote>
+<p class="find"><strong>How to see it on the page:</strong> Open the &quot;Interim Guidance on Professional Majors&quot; link near &quot;Please review our&quot; on https://www.csuohio.edu/financial-aid/federal-student-aid-changes-for-2026-2027 (it opens the PDF).</p>
+<dl class="facts"><dt>Programs covered</dt><dd>Students in majors newly added to the Department of Education&#x27;s interim professional degree list (the PDF says &quot;newly added CIP code major students&quot;; it does not list them by name)</dd><dt>Amount or terms</dt><dd>$20,500 a year and $100,000 aggregate (graduate limits) instead of $50,000 a year and $200,000 aggregate</dd><dt>Date on the page</dt><dd>File name and folder carry 7_22_26 and 2026-08; no date printed in the text I read</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.csuohio.edu/sites/default/files/2026-08/professional-program-update-7_22_26.pdf#page=1" target="_blank" rel="noopener">Interim Guidance on Professional Majors (PDF) (PDF, opens at page 1)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<div class="caveats"><h4>Caveats</h4><p>The capture tool cannot open PDFs, so the image is page 1 of the PDF (https://www.csuohio.edu/sites/default/files/2026-08/professional-program-update-7_22_26.pdf) rendered with pdftoppm at 110 dpi and cropped; the yellow box was drawn over the sentence from pdftotext word boxes, not by the capture tool. The sentence was read with pdftotext (the line breaks were joined). The linked HTML page https://www.csuohio.edu/financial-aid/federal-student-aid-changes-for-2026-2027 does not state the $20,500 holding itself; it only lists Law (J.D.) as professional and links to this PDF. The PDF says programs are &#x27;newly added CIP code major students&#x27; without naming them.</p></div>
+</article>
+<article class="example" id="duke-nursing" aria-labelledby="duke-nursing-h">
+<h3 id="duke-nursing-h">Duke University School of Nursing, North Carolina</h3>
+<p class="headline">Duke nursing keeps its students at the $20,500 yearly federal limit while the professional-degree lawsuit is unresolved.</p>
+<p class="explain">Duke&#x27;s nursing school says a federal court paused the Education Department&#x27;s narrow definition of professional degrees, so MSN and DNP students are temporarily eligible for the higher $50,000 limit. Because the outcome is uncertain and borrowing more could cost students later federal loans, the school will keep applying the $20,500 limit.</p>
+<figure class="shot"><a class="shot-link" style="max-width:982px" href="shots/duke-nursing.png" aria-label="Open the screenshot larger"><img src="shots/duke-nursing.png" width="1936" height="1636" alt="Screenshot of the source page. Duke nursing keeps its students at the $20,500 yearly federal limit while the professional-degree lawsuit is unresolved." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>Because of this uncertainty, Duke University School of Nursing will continue to apply the federal loan limit, $20,500 annually, established under the Department’s original definitions.</p><p>This temporary eligibility is expected to remain in effect through at least December 2026 based on the DDC’s current schedule to consider the litigation.</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>Nursing programs; the page names MSN and DNP students</dd><dt>Amount or terms</dt><dd>$20,500 annually</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://nursing.duke.edu/academic-programs/financial-aid-scholarships/borrowing-limits#:~:text=Because%20of%20this%20uncertainty%2C%20Duke%20University%20School%20of%20Nursing%20will%20continue%20to%20apply%20the%20federal%20loan%20limit%2C%20%2420%2C500%20annually%2C%20established%20under%20the%20Department%E2%80%99s%20original%20definitions." target="_blank" rel="noopener">Student Borrowing Limits (opens at the highlighted sentence)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>The page does not name the case (AANP v. McMahon); it says &#x27;consolidated lawsuits brought by health associations&#x27;. It is a school decision to apply the lower limit, but the page words it as continuing to apply the federal limit under the original definitions. reason_quote is two consecutive sentences in one paragraph as read in find mode (the highlight shows only quote and second_quote). Page undated. Frame starts mid-heading. The alert-bar host alertbar.oit.duke.edu was blocked (a site notice banner only); the page rendered with its normal styling.</p></div>
+</article>
+<article class="example" id="springfield-college" aria-labelledby="springfield-college-h">
+<h3 id="springfield-college-h">Springfield College, Massachusetts</h3>
+<p class="headline">Springfield College caps listed health and psychology graduate programs at $20,500 a year in unsubsidized loans for 2026-27.</p>
+<p class="explain">Springfield College set an institutional loan limit of $20,500 a year for the graduate programs it lists, including physician assistant, physical therapy and occupational therapy. The page opens this section with the June 2026 court stay in the nurse practitioners&#x27; case, which would otherwise let these students borrow up to $50,000 a year. It applies the limit to every student in the listed programs.</p>
+<figure class="shot"><a class="shot-link" style="max-width:1046px" href="shots/springfield-college.png" aria-label="Open the screenshot larger"><img src="shots/springfield-college.png" width="2064" height="966" alt="Screenshot of the source page. Springfield College caps listed health and psychology graduate programs at $20,500 a year in unsubsidized loans for 2026-27." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>Starting July 1, 2026, and in effect for the 2026-27 school year, the programs listed below will be limited to borrowing up to a maximum amount of $20,500 unsubsidized loans per year.</p><p>On June 24, 2026, Judge Beryl A. Howell granted a temporary court stay for the case American Association of Nurse Practitioners vs. Linda McMahon</p></blockquote>
+<p class="find"><strong>How to see it on the page:</strong> Click the &quot;Changes for Graduate Students&quot; tab, then find the section headed &quot;Institutional Program Loan Limits&quot;.</p>
+<dl class="facts"><dt>Programs covered</dt><dd>Graduate programs listed on the page: Physician Assistant (PA), Athletic Training (AT), Occupational Therapy (MSOT, OTD), Physical Therapy (DPT), Clinical, Counseling and Applied Psychology (PsyD), Speech-Language Pathology (SLP)</dd><dt>Amount or terms</dt><dd>$20,500 a year in unsubsidized loans, applied to all students in the listed programs, in effect for 2026-27</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://springfield.edu/financial-aid/federal-student-aid-changes-one-big-beautiful-bill-act" target="_blank" rel="noopener">Federal Student Aid Changes from the One Big Beautiful Bill Act (opens the page; the sentence is inside a collapsed section, see above)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<div class="caveats"><h4>Caveats</h4><p>Page gives no sentence that explicitly states why the limit was set; the link to the court case is by placement and by the sentence that the stay would qualify these students for up to $50,000. Program list read in find mode (six bullets seen); the first screenshot frame shows only the first bullets. Undated page. The text was inside a tab that the tool opened by clicking &quot;Changes for Graduate Students&quot;; a visitor must click that tab.</p></div>
+</article>
+<article class="example" id="touro-injunction-programs" aria-labelledby="touro-injunction-programs-h">
+<h3 id="touro-injunction-programs-h">Touro University, New York</h3>
+<p class="headline">Touro holds its injunction-listed programs at $20,500 a year and $100,000 in total federal unsubsidized loans.</p>
+<p class="explain">Touro lists five programs (speech-language pathology, physician assistant, occupational therapy, physical therapy and nursing MSN) that are professional only under the current court injunction. For these it set its own Direct Unsubsidized limits at the graduate level. It says litigation could change the rules and it wants to protect students from that uncertainty.</p>
+<figure class="shot"><a class="shot-link" style="max-width:1198px" href="shots/touro-injunction-programs.png" aria-label="Open the screenshot larger"><img src="shots/touro-injunction-programs.png" width="2368" height="760" alt="Screenshot of the source page. Touro holds its injunction-listed programs at $20,500 a year and $100,000 in total federal unsubsidized loans." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>Annual Loan Limit: $20,500 per academic year</p><p>In the interest of protecting students from the uncertainty that may result from changing regulatory requirements, Touro University has established responsible borrowing limits that provide consistency while the legal process runs its course.</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>Programs Touro lists as professional under the current injunction: Speech-Language Pathology, Physician Associate/Assistant, Occupational Therapy, Physical Therapy, Registered Nursing (MSN)</dd><dt>Amount or terms</dt><dd>Annual limit $20,500 per academic year; program-level aggregate $100,000 (excluding undergraduate federal loan debt); lifetime aggregate $257,000</dd><dt>Date on the page</dt><dd>Updated July 8, 2026</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.touro.edu/students/policies/financial-aid/obbba/#:~:text=Annual%20Loan%20Limit%3A%20%2420%2C500%20per%20academic%20year" target="_blank" rel="noopener">Federal Financial Aid Changes Under the One Big Beautiful Bill Act (OBBBA) | Touro University (opens at the highlighted sentence)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>The page speaks of &#x27;litigation&#x27;, &#x27;ongoing judicial review&#x27; and &#x27;the current injunction&#x27; but never names the case. The screenshot frame shows the program list and the limit line highlighted; the reason sentence (second_quote) sits above the frame and is not visible in the image. A small fixed logo or overlay at the top left of the page overlaps the first line of a bullet list above the heading; the heading and highlighted text are clear. The icon font host ka-p.fontawesome.com was blocked (icons only).</p></div>
+</article>
+<article class="example" id="dayton-pt-pa" aria-labelledby="dayton-pt-pa-h">
+<h3 id="dayton-pt-pa-h">University of Dayton, Ohio</h3>
+<p class="headline">Dayton declines to raise loan limits for its physical therapy and physician assistant programs while the court case continues.</p>
+<p class="explain">After the June 2026 court stay, the Education Department listed Dayton&#x27;s physical therapy and physician assistant programs as temporarily professional. Dayton says it will not raise federal loan eligibility for these programs, because it fears harm to student borrowers and the school if final court rulings restore the original definition.</p>
+<figure class="shot"><a class="shot-link" style="max-width:776px" href="shots/dayton-pt-pa.png" aria-label="Open the screenshot larger"><img src="shots/dayton-pt-pa.png" width="1524" height="1212" alt="Screenshot of the source page. Dayton declines to raise loan limits for its physical therapy and physician assistant programs while the court case continues." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>Two University of Dayton programs not impacted by the original rule change are now included as professional degree programs – the doctor of physical therapy program and the master&#x27;s of physician assistant practice. Although these programs are now temporarily eligible for higher loan limits, the University is closely monitoring the legal proceedings before increasing federal loan eligibility for new students in these academic programs.</p><p>No. The University will not provide increased federal loan eligibility based on this temporary legal decision.</p></blockquote>
+<p class="find"><strong>How to see it on the page:</strong> Under &quot;Frequently Asked Questions&quot;, click &quot;Does the federal court stay change UD&#x27;s current professional program federal loan awarding policy following the passage of OB3?&quot;.</p>
+<dl class="facts"><dt>Programs covered</dt><dd>Doctor of Physical Therapy (DPT) and Master of Physician Assistant Practice (MPAP) for new borrowers</dd><dt>Amount or terms</dt><dd>No dollar cap stated for these programs; the University &#x27;will not provide increased federal loan eligibility&#x27;, so they stay at graduate-level limits ($20,500 a year per the page&#x27;s FAQ)</dd><dt>Date on the page</dt><dd>Last updated on July 16, 2026</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://udayton.edu/tuition-aid/graduate/financial-aid/professional-programs.php" target="_blank" rel="noopener">Professional Programs : University of Dayton, Ohio (opens the page; the sentence is inside a collapsed section, see above)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<div class="caveats"><h4>Caveats</h4><p>The first quote is longer than 300 characters (two sentences in one paragraph). The page does not state a dollar cap for the two programs; $20,500 comes from a separate FAQ answer on graduate limits. The reason_quote is on the page but not in the screenshot frame. captured_at is approximate (second capture of this page, timestamp not recorded; first capture 2026-11-24T21:17:44.498Z). The answer was in a collapsed FAQ item that the tool opened (details element); a visitor must click the question.</p></div>
+</article>
+<article class="example" id="vcu-otd" aria-labelledby="vcu-otd-h">
+<h3 id="vcu-otd-h">Virginia Commonwealth University, Virginia</h3>
+<p class="headline">Virginia Commonwealth University keeps six programs at $20,500 a year instead of the temporary $50,000.</p>
+<p class="explain">The university&#x27;s catalog says six of its programs are eligible for the higher $50,000 annual limit under the Education Department&#x27;s temporary guidance, which followed a federal court order. It says that, given the ongoing litigation, it will keep the annual limit for those programs at $20,500. The decision took effect in July 2026 and the university says it may change.</p>
+<figure class="shot"><a class="shot-link" style="max-width:722px" href="shots/vcu-otd.png" aria-label="Open the screenshot larger"><img src="shots/vcu-otd.png" width="1416" height="1028" alt="Screenshot of the source page. Virginia Commonwealth University keeps six programs at $20,500 a year instead of the temporary $50,000." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>VCU will maintain the existing annual loan limit for the above-referenced programs at $20,500</p><p>the following VCU programs are eligible for an increased $50,000 annual Federal Direct Unsubsidized loan limit for professional programs</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>Occupational Therapy Doctorate (O.T.D.); Physical Therapy, Doctor of (D.P.T.); Nursing, Master of Science in (M.S.N.); Nurse Anesthetist Practice, Doctor of (D.N.A.P.); Nursing Practice, Doctor of (D.N.P.); Clinical Psychology, Doctor of Philosophy (Ph.D.)</dd><dt>Amount or terms</dt><dd>$20,500 a year, instead of the $50,000 the temporary federal guidance allows</dd><dt>Date on the page</dt><dd>2026-27 edition; decision effective July 2026</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://bulletin.vcu.edu/graduate/school-allied-health-professions/occupational-therapy/occupational-therapy-otd-entry-level/#:~:text=VCU%20will%20maintain%20the%20existing%20annual%20loan%20limit%20for%20the%20above%2Dreferenced%20programs%20at%20%2420%2C500" target="_blank" rel="noopener">Occupational Therapy Doctorate (O.T.D.), Virginia Commonwealth University Academic Catalog, 2026-27 edition (opens at the highlighted sentence)</a> (The school&#x27;s own page, captured 2026-11-25)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>The statement was read on the catalog page for the occupational therapy doctorate; the same notice may appear on the other five programs&#x27; catalog pages, which were not opened. The lead came from a web search on 2026-11-24 and was confirmed on the page on 2026-11-25.</p></div>
+</article>
+<article class="example" id="auburn-other-professional" aria-labelledby="auburn-other-professional-h">
+<h3 id="auburn-other-professional-h">Auburn University, Alabama</h3>
+<p class="headline">Auburn keeps its starred &#x27;other professional&#x27; doctoral programs at the $20,500 graduate loan limit while a federal court reviews them.</p>
+<p class="explain">Auburn lists several doctoral programs the Education Department temporarily designated as professional. A federal court is reviewing that designation, so Auburn says it will keep following the $20,500 graduate limit until a final decision. Veterinary Medicine and Pharmacy appear in the same list but are not starred.</p>
+<figure class="shot"><a class="shot-link" style="max-width:1070px" href="shots/auburn-other-professional.png" aria-label="Open the screenshot larger"><img src="shots/auburn-other-professional.png" width="2112" height="1162" alt="Screenshot of the source page. Auburn keeps its starred &#x27;other professional&#x27; doctoral programs at the $20,500 graduate loan limit while a federal court reviews them." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>A federal court is currently reviewing whether these programs, and other temporarily designated programs, should be considered professional programs for Federal Student Aid purposes. Until a final decision is made, we will continue to follow the graduate loan limit of $20,500.</p><p>Pharmaceutical Sciences/ PhD/ Option in Pharmaceutics*Pharmaceutical Sciences/ PhD/ Option in Medicinal Chemistry*Pharmaceutical Sciences/ PhD/ Option in Health Outcomes*Pharmaceutical Sciences/ PhD/ Option in Pharmacology*Psychology/ Clinical/ PhD*Education/ Counseling Psychology/ PhD*Educational Psychology/ PhD*Psychology/ Industrial/Organizational Option/ PhD*Veterinary Medicine Pharmacy, Doctor of</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>Pharmaceutical Sciences PhD (options in Pharmaceutics, Medicinal Chemistry, Health Outcomes, Pharmacology); Clinical Psychology PhD; Counseling Psychology PhD (Education); Educational Psychology PhD; Industrial/Organizational Psychology PhD; also listed under Other Professional: Veterinary Medicine; Pharmacy, Doctor of</dd><dt>Amount or terms</dt><dd>$20,500 graduate loan limit</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://auburn.edu/administration/finaid/resources/2026-2027_updates.php#:~:text=A%20federal%20court%20is%20currently%20reviewing%20whether%20these%20programs%2C%20and%20other%20temporarily%20designated%20programs%2C%20should%20be%20considered%20professional%20programs%20for%20Federal%20Student%20Aid%20purposes.%20Until%20a%20final%20decision%20is%20made%2C%20we%20will%20continue%20to%20follow%20the%20graduate%20loan%20limit%20of%20%2420%2C500." target="_blank" rel="noopener">Federal Student Aid Changes | Financial Aid and Scholarships (opens at the highlighted sentence)</a> (The school&#x27;s own page, captured 2026-11-25)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>No date on page. The second highlight covers the whole program list including Veterinary Medicine and Pharmacy (unstarred, shown at $200,000 aggregate as professional); only starred programs are tied to the footnote. Page does not name the case.</p></div>
+</article>
+<article class="example" id="idaho-state-university" aria-labelledby="idaho-state-university-h">
+<h3 id="idaho-state-university-h">Idaho State University, Idaho</h3>
+<p class="headline">Idaho State holds court-stay programs other than Pharmacy and Clinical Psychology doctorates to the $20,500 annual limit.</p>
+<p class="explain">Idaho State is using the Education Department&#x27;s original professional-degree definition until the litigation over that definition ends. Only Doctor of Pharmacy and Doctor of Clinical Psychology get the professional limit; other programs on the court-stay list stay at $20,500. The school calls this a prudent, deliberate choice to avoid harm to students if the ruling changes.</p>
+<figure class="shot"><a class="shot-link" style="max-width:919px" href="shots/idaho-state-university.png" aria-label="Open the screenshot larger"><img src="shots/idaho-state-university.png" width="1810" height="794" alt="Screenshot of the source page. Idaho State holds court-stay programs other than Pharmacy and Clinical Psychology doctorates to the $20,500 annual limit." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>All other programs listed in the temporary court stay will continue to be categorized as regular graduate programs and held to the $20,500 annual loan limit.</p><p>ISU believes it is prudent to use this lower limit until the legal challenges have been resolved.</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>All programs listed in the temporary court stay other than Doctor of Pharmacy and Doctor of Clinical Psychology (page does not list them individually)</dd><dt>Amount or terms</dt><dd>$20,500 annual loan limit (Doctor of Pharmacy and Doctor of Clinical Psychology treated as professional)</dd><dt>Date on the page</dt><dd>Last revised 8/14/2026</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.isu.edu/financialaid/one-big-beautiful-bill-act-/#:~:text=All%20other%20programs%20listed%20in%20the%20temporary%20court%20stay%20will%20continue%20to%20be%20categorized%20as%20regular%20graduate%20programs%20and%20held%20to%20the%20%2420%2C500%20annual%20loan%20limit." target="_blank" rel="noopener">One Big Beautiful Bill Act | Idaho State University (opens at the highlighted sentence)</a> (The school&#x27;s own page, captured 2026-11-25)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+</article>
+<article class="example" id="loyola-chicago" aria-labelledby="loyola-chicago-h">
+<h3 id="loyola-chicago-h">Loyola University Chicago, Illinois</h3>
+<p class="headline">Loyola Chicago awards &#x27;other professional degree programs&#x27; $20,500 while the D.C. federal court cases are pending.</p>
+<p class="explain">Loyola says it is watching the list of professional programs. Until the U.S. District Court for the District of Columbia rules in two consolidated cases, it will award those other programs $20,500. It will update amounts once a final ruling is in place.</p>
+<figure class="shot"><a class="shot-link" style="max-width:772px" href="shots/loyola-chicago.png" aria-label="Open the screenshot larger"><img src="shots/loyola-chicago.png" width="1516" height="598" alt="Screenshot of the source page. Loyola Chicago awards &#x27;other professional degree programs&#x27; $20,500 while the D.C. federal court cases are pending." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>Pending a court ruling issued by the U.S. District Court for the District of Columbia, in consolidated cases Nos. 26-1780, 26-1941, Loyola will continue to award other professional degree programs at the current federal Direct Loan amount of $20,500.</p></blockquote>
+<p class="find"><strong>How to see it on the page:</strong> Click the panel headed &quot;Federal Loan Limits&quot;.</p>
+<dl class="facts"><dt>Programs covered</dt><dd>Other professional degree programs (outside the federally confirmed professional list; not named on the page)</dd><dt>Amount or terms</dt><dd>$20,500 (current federal Direct Loan amount)</dd><dt>Date on the page</dt><dd>Last updated: July 9, 2026</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.luc.edu/finaid/resources/onebigbeautifulbillactobbba/" target="_blank" rel="noopener">One Big Beautiful Bill Act (OBBBA): What You Need to Know | Financial Aid Office | Loyola University Chicago (opens the page; the sentence is inside a collapsed section, see above)</a> (The school&#x27;s own page, captured 2026-11-25)</p>
+<div class="caveats"><h4>Caveats</h4><p>Single sentence states both action and reason; no second passage.</p></div>
+</article>
+<article class="example" id="loyola-new-orleans" aria-labelledby="loyola-new-orleans-h">
+<h3 id="loyola-new-orleans-h">Loyola University New Orleans, Louisiana</h3>
+<p class="headline">Loyola New Orleans keeps Nursing and other unconfirmed programs at the $20,500 graduate rate until the litigation ends.</p>
+<p class="explain">A June 24, 2026 court ruling temporarily widened the professional list to health programs such as Nursing, PA, PT and OT. Loyola is not applying that temporary expansion when packaging loans, to avoid awarding amounts that may need to be reduced later.</p>
+<figure class="shot"><a class="shot-link" style="max-width:1186px" href="shots/loyola-new-orleans.png" aria-label="Open the screenshot larger"><img src="shots/loyola-new-orleans.png" width="2344" height="616" alt="Screenshot of the source page. Loyola New Orleans keeps Nursing and other unconfirmed programs at the $20,500 graduate rate until the litigation ends." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>Until this litigation is resolved, Loyola is continuing to award loans for programs outside the confirmed federal list above, including our Nursing programs, at the standard graduate rate ($20,500/year, $100,000 aggregate), consistent with the confirmed regulatory definition.</p><p>Loyola is not applying the temporary, litigation-dependent expansion to loan packaging at this time, in order to avoid awarding amounts that may later need to be reduced if the ruling does not stand.</p></blockquote>
+<p class="find"><strong>How to see it on the page:</strong> Click the panel headed &quot;Is my program a Professional or Graduate program? How can I find that out?&quot; and read the sections &quot;A note on pending litigation&quot; and &quot;Loyola&#x27;s current approach&quot;.</p>
+<dl class="facts"><dt>Programs covered</dt><dd>Programs outside the confirmed federal list, including Nursing programs</dd><dt>Amount or terms</dt><dd>$20,500/year, $100,000 aggregate (standard graduate rate)</dd><dt>Date on the page</dt><dd>Last updated: August 17, 2026</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://advancement.loyno.edu/admissions/tuition-financial-aid/2026-2027-financial-aid-updates-ob3" target="_blank" rel="noopener">2026-2027 Financial Aid Updates (OB3) | Loyola University New Orleans (opens the page; the sentence is inside a collapsed section, see above)</a> (The school&#x27;s own page, captured 2026-11-25)</p>
+<div class="caveats"><h4>Caveats</h4><p>In the PNG the site footer/header band overlaps the top of the frame and partly covers the heading &#x27;Loyola&#x27;s current approach&#x27;; highlighted text is legible. Cases named on page: Nos. 26-1780 and 26-1941 (D.D.C.).</p></div>
+</article>
+<article class="example" id="ohio-university" aria-labelledby="ohio-university-h">
+<h3 id="ohio-university-h">Ohio University, Ohio</h3>
+<p class="headline">Ohio University keeps all graduate programs except Osteopathic Medicine and Clinical Psychology at $20,500 during litigation.</p>
+<p class="explain">Some programs were temporarily classified as professional after a recent court ruling. Ohio says it is temporarily restricting loan limits by program because litigation is ongoing and guidance is uncertain. Only the osteopathic medicine and clinical psychology doctorates get the higher professional limit.</p>
+<figure class="shot"><a class="shot-link" style="max-width:1216px" href="shots/ohio-university.png" aria-label="Open the screenshot larger"><img src="shots/ohio-university.png" width="2404" height="626" alt="Screenshot of the source page. Ohio University keeps all graduate programs except Osteopathic Medicine and Clinical Psychology at $20,500 during litigation." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>Ohio University is temporarily restricting loan limits by program, as litigation is ongoing and final guidance remains uncertain. Loan limits for all Ohio University graduate programs, except Osteopathic Medicine and Clinical Psychology, remain at $20,500 at this time.</p></blockquote>
+<p class="find"><strong>How to see it on the page:</strong> Open the section &quot;Professional&quot; Degree Classification (the capture tool had to force an accordion open).</p>
+<dl class="facts"><dt>Programs covered</dt><dd>All graduate programs except Osteopathic Medicine and Clinical Psychology</dd><dt>Amount or terms</dt><dd>$20,500</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.ohio.edu/financial-aid/types/obbba-key-changes" target="_blank" rel="noopener">Key Changes from OBBBA | Ohio University (opens the page; the sentence is inside a collapsed section, see above)</a> (The school&#x27;s own page, captured 2026-11-25)</p>
+<div class="caveats"><h4>Caveats</h4><p>No date on page; case not named. Capture used forced opening, so layout may differ slightly from what a visitor sees.</p></div>
+</article>
+<article class="example" id="anderson-university-sc" aria-labelledby="anderson-university-sc-h">
+<h3 id="anderson-university-sc-h">Anderson University (South Carolina), South Carolina</h3>
+<p class="headline">Anderson University set its own $20,500 limit on Federal Direct Unsubsidized Loans, citing litigation uncertainty.</p>
+<p class="explain">In its August 2026 financial aid notice, Anderson says current litigation has created uncertainty about loan limits and Education Department guidance is likely to change. For that reason the university decided to set an institutional limit of $20,500 on Federal Direct Unsubsidized Loans. The document does not name the case or list affected programs; it says the Master of Divinity is the only Anderson professional degree.</p>
+<figure class="shot"><a class="shot-link" style="max-width:481px" href="shots/anderson-university-sc.png" aria-label="Open the screenshot larger"><img src="shots/anderson-university-sc.png" width="935" height="536" alt="Screenshot of the source page. Anderson University set its own $20,500 limit on Federal Direct Unsubsidized Loans, citing litigation uncertainty." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>Current litigation has created uncertainty regarding loan limits. Due to this uncertainty and the fact that DOE guidance is likely to change, AU has decided to set an institutional limit of $20,500 on Federal Direct Unsubsidized Loans.</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>The document names no programs; the limit is stated for Federal Direct Unsubsidized Loans generally. It notes the only AU professional degree is the Master of Divinity (M.Div.).</dd><dt>Amount or terms</dt><dd>$20,500 institutional limit on Federal Direct Unsubsidized Loans</dd><dt>Date on the page</dt><dd>August 2026 (from file name; PDF created Aug 7, 2026; no date printed in the text)</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://andersonuniversity.edu/wp-content/uploads/2026/08/OB3-Script-August-2026-rev.pdf#page=2" target="_blank" rel="noopener">NEW FEDERAL STUDENT FINANCIAL AID REGULATIONS (PDF, opens at page 2)</a> (The school&#x27;s own page, captured 2026-11-25)</p>
+<div class="caveats"><h4>Caveats</h4><p>The source is a PDF and the image is a render of PDF page 2 with the yellow box drawn by this project, not a browser capture. An earlier version of the same document on the school&#x27;s site (OB3-Script-August-2026.pdf) does not contain the sentence. The document does not name the programs, and it refers to &#x27;current litigation&#x27; without naming the case.</p></div>
+</article>
+</section>
+<section class="group" id="section-limits-unstated" aria-labelledby="section-limits-unstated-h"><h2 id="section-limits-unstated-h">Schools listing the lower amount after the court order, without calling it a choice</h2>
+<p class="group-note">These pages are dated after the court order and list $20,500 for programs the Education Department&#x27;s temporary list makes eligible for $50,000. Neither page says the school chose the lower amount. That reading is this project&#x27;s, from the dates and the amounts.</p>
+<article class="example" id="msu-nursing-pa" aria-labelledby="msu-nursing-pa-h">
+<h3 id="msu-nursing-pa-h">Michigan State University, Michigan</h3>
+<p class="headline">Michigan State&#x27;s page, updated September 2026, still lists nursing and PA at $20,500, with no stated school decision.</p>
+<p class="explain">The Michigan State financial aid page is dated after the June 24, 2026 court order and lists $20,500 for these programs. The Education Department&#x27;s temporary list makes such programs eligible for $50,000. The page does not say the school chose the lower amount; it may simply not have been updated, or the school may read the federal list differently.</p>
+<figure class="shot"><a class="shot-link" style="max-width:1192px" href="shots/michigan-state-nursing-pa.png" aria-label="Open the screenshot larger"><img src="shots/michigan-state-nursing-pa.png" width="2356" height="1240" alt="Screenshot of the source page. Michigan State&#x27;s page, updated September 2026, still lists nursing and PA at $20,500, with no stated school decision." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>July 1, 2026 and Beyond: Eligible graduate students can borrow up to $20,500 annually. Medical and Law students can borrow up to $50,000 annually. (For financial aid purposes, advanced degrees in Nursing and Physician&#x27;s Assistant are considered graduate level programs, not professional per the U.S. Department of Education&#x27;s official designations.)</p></blockquote>
+<p class="find"><strong>How to see it on the page:</strong> Under &quot;Graduate and Professional Students&quot;, click &quot;How much can I borrow annually under the new Federal Direct Unsubsidized Loan program?&quot;</p>
+<dl class="facts"><dt>Programs covered</dt><dd>advanced degrees in Nursing and Physician&#x27;s Assistant (graduate level); Medical and Law students at $50,000</dd><dt>Amount or terms</dt><dd>Graduate $20,500 annually; Medical and Law $50,000 annually (July 1, 2026 and beyond)</dd><dt>Date on the page</dt><dd>Last updated September 21, 2026</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://finaid.msu.edu/obbba" target="_blank" rel="noopener">One Big Beautiful Bill Act: Frequently Asked Questions | Office of Financial Aid | Michigan State University (opens the page; the sentence is inside a collapsed section, see above)</a> (The school&#x27;s own page, captured 2026-11-25)</p>
+<div class="caveats"><h4>Caveats</h4><p>The classification is this project&#x27;s reading of the dates and amounts, not the school&#x27;s statement. The page cites the Department of Education&#x27;s official designations. The &#x27;Last updated September 21, 2026&#x27; line is near the top of the page and is not in the screenshot frame.</p></div>
+</article>
+<article class="example" id="ouhsc-dpt-otd" aria-labelledby="ouhsc-dpt-otd-h">
+<h3 id="ouhsc-dpt-otd-h">University of Oklahoma Health Sciences Center, Oklahoma</h3>
+<p class="headline">Oklahoma&#x27;s aid sheets effective July 17, 2026 list $20,500 for the OT and PT doctorates, with no stated school decision.</p>
+<p class="explain">The Oklahoma Health Sciences Center aid sheet page is dated after the June 24, 2026 court order and lists $20,500 for these programs. The Education Department&#x27;s temporary list makes such programs eligible for $50,000. The page does not say the school chose the lower amount; it may simply not have been updated, or the school may read the federal list differently.</p>
+<figure class="shot"><a class="shot-link" style="max-width:481px" href="shots/ouhsc-dpt-otd.png" aria-label="Open the screenshot larger"><img src="shots/ouhsc-dpt-otd.png" width="934" height="1039" alt="Screenshot of the source page. Oklahoma&#x27;s aid sheets effective July 17, 2026 list $20,500 for the OT and PT doctorates, with no stated school decision." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>For the 12 months of study in an academic year, a possible maximum of $20,500 in Federal Direct Unsubsidized loans are offered.</p><p>Effective 7/17/2026</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>Doctor of Occupational Therapy; a matching DPT sheet (2026-2027 DPT_after.pdf) shows the same wording</dd><dt>Amount or terms</dt><dd>$20,500 federal Direct Unsubsidized Loan offered per year; Graduate Lifetime Limit $100,000</dd><dt>Date on the page</dt><dd>Effective 7/17/2026</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://financialservices.ouhsc.edu/Portals/1354/assets/student%20financial%20aid/AY27/after/2026-2027%20OTD_after.pdf#page=2" target="_blank" rel="noopener">2026-2027 Doctor of Occupational Therapy cost-of-attendance sheet (PDF) (PDF, opens at page 2)</a> (A news article, captured 2026-11-25)</p>
+<div class="caveats"><h4>Caveats</h4><p>The classification is this project&#x27;s reading of the dates and amounts, not the school&#x27;s statement. The image is a PDF render (page 2 of the OTD sheet) with the yellow highlight boxes drawn by this project, not by the school or the capture tool. The quote was read from the PDF text, not matched by the capture tool. The matching DPT sheet (2026-2027 DPT_after.pdf, same host) has the same sentence but was not rendered; the OTD program name is on page 1, not in the image.</p></div>
+</article>
+</section>
+<section class="group" id="section-limits-reserve" aria-labelledby="section-limits-reserve-h"><h2 id="section-limits-reserve-h">Schools that reserve the right or package a lower amount</h2>
+<article class="example" id="lsu-parent-plus-default" aria-labelledby="lsu-parent-plus-default-h">
+<h3 id="lsu-parent-plus-default-h">Louisiana State University, Louisiana</h3>
+<ul class="tags"><li>Lower amount by default</li><li>Gives its own reason</li></ul>
+<p class="headline">LSU starts Parent PLUS loans at $15,000 a year, but parents may ask for the full $20,000.</p>
+<p class="explain">LSU puts Parent PLUS loans in aid offers at $15,000 a year instead of the $20,000 federal maximum. It says this helps families make the $65,000 lifetime limit last four years. Parents can still apply for the full $20,000 a year at studentaid.gov.</p>
+<figure class="shot"><a class="shot-link" style="max-width:1146px" href="shots/lsu-parent-plus-default.png" aria-label="Open the screenshot larger"><img src="shots/lsu-parent-plus-default.png" width="2264" height="842" alt="Screenshot of the source page. LSU starts Parent PLUS loans at $15,000 a year, but parents may ask for the full $20,000." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>LSU will provisionally package Parent PLUS loans at $15,000 per year to help families preserve eligibility across four years, up to the lifetime limit.</p><p>Parents may choose to apply for the full $20,000 annual maximum at studentaid.gov.</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>Parent PLUS borrowers for new undergraduate students</dd><dt>Amount or terms</dt><dd>Packaged at $15,000 a year by default; parents may apply for the full $20,000 annual maximum at studentaid.gov</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.lsu.edu/financialaid/policies/one-big-beautiful-bill-act.php#:~:text=LSU%20will%20provisionally%20package%20Parent%20PLUS%20loans%20at%20%2415%2C000%20per%20year%20to%20help%20families%20preserve%20eligibility%20across%20four%20years%2C%20up%20to%20the%20lifetime%20limit." target="_blank" rel="noopener">One Big Beautiful Bill Act (opens at the highlighted sentence)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>Page undated.</p></div>
+</article>
+<article class="example" id="ku-limit-or-refuse" aria-labelledby="ku-limit-or-refuse-h">
+<h3 id="ku-limit-or-refuse-h">University of Kansas, Kansas</h3>
+<ul class="tags"><li>Reserves the right</li><li>Gives no reason</li></ul>
+<p class="headline">Kansas keeps the right to reduce or refuse a student&#x27;s federal Direct Loan after a case-by-case review.</p>
+<p class="explain">The University of Kansas financial aid office says it may reduce or refuse to certify a student&#x27;s federal Direct Loan after reviewing the student&#x27;s situation, including total student loan debt. Students may appeal in writing. This is a case-by-case power, not a limit on a whole program.</p>
+<figure class="shot"><a class="shot-link" style="max-width:1294px" href="shots/ku-limit-or-refuse.png" aria-label="Open the screenshot larger"><img src="shots/ku-limit-or-refuse.png" width="2560" height="520" alt="Screenshot of the source page. Kansas keeps the right to reduce or refuse a student&#x27;s federal Direct Loan after a case-by-case review." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>reserves the right to, on a case-by-case basis, reduce a student’s determination of need for or refuse certification of a student’s federal Direct Subsidized, Direct Unsubsidized, or Direct PLUS Loan upon a review of a student&#x27;s situation, including overall student loan debt.</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>Individual students, case by case</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://services.ku.edu/TDClient/818/Portal/KB/PrintArticle?ID=21648#:~:text=reserves%20the%20right%20to%2C%20on%20a%20case%2Dby%2Dcase%20basis%2C%20reduce%20a%20student%E2%80%99s%20determination%20of%20need%20for%20or%20refuse%20certification%20of%20a%20student%E2%80%99s%20federal%20Direct%20Subsidized%2C%20Direct%20Unsubsidized%2C%20or%20Direct%20PLUS%20Loan%20upon%20a%20review%20of%20a%20student%27s%20situation%2C%20including%20overall%20student%20loan%20debt." target="_blank" rel="noopener">Limiting Direct Loan Borrowing (opens at the highlighted sentence)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>Undated, long-standing policy that rests on older authority, not the 2026 program-level limit authority; weak fit for the evidence window. Quote begins mid-sentence (&#x27;The University&#x27;s Office of Financial Aid &amp; Scholarships ... reserves the right to&#x27;).</p></div>
+</article>
+<article class="example" id="grand-valley-state" aria-labelledby="grand-valley-state-h">
+<h3 id="grand-valley-state-h">Grand Valley State University, Michigan</h3>
+<ul class="tags"><li>Lower amount by default</li><li>Gives its own reason</li></ul>
+<p class="headline">Grand Valley State is not yet offering the $50,000 professional loan limit but lets impacted students request an increase.</p>
+<p class="explain">GVSU says it is waiting for more federal information before offering the higher professional-program loan. When it has more guidance it will post updates. Students in affected programs can ask the financial aid office for an increase.</p>
+<figure class="shot"><a class="shot-link" style="max-width:1218px" href="shots/grand-valley-state.png" aria-label="Open the screenshot larger"><img src="shots/grand-valley-state.png" width="2408" height="492" alt="Screenshot of the source page. Grand Valley State is not yet offering the $50,000 professional loan limit but lets impacted students request an increase." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>We are waiting to move forward with offering the professional program federal loan (up to $50,000 a year) until we have more information from the federal government before making any policy/funding changes.</p></blockquote>
+<p class="find"><strong>How to see it on the page:</strong> Click the FAQ question &quot;If my graduate program is considered professional by the Department of Education, can I receive a higher loan amount?&quot;</p>
+<dl class="facts"><dt>Programs covered</dt><dd>Graduate programs considered professional by the Department of Education (not named on the page)</dd><dt>Amount or terms</dt><dd>Professional program federal loan (up to $50,000 a year) not yet offered; students can ask the aid office for an increase</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.gvsu.edu/financialaid/student-loans-179.htm" target="_blank" rel="noopener">Student Loans - Office of Financial Aid &amp; Scholarships - Grand Valley State University (opens the page; the sentence is inside a collapsed section, see above)</a> (The school&#x27;s own page, captured 2026-11-25)</p>
+<div class="caveats"><h4>Caveats</h4><p>Page does not state the amount students get meanwhile, though the request-an-increase sentence implies a lower default; no date; court not mentioned.</p></div>
+</article>
+</section>
+<section class="group" id="section-stopped" aria-labelledby="section-stopped-h"><h2 id="section-stopped-h">Schools that stopped offering federal loans or a loan type</h2>
+<p class="group-note">None of these schools ties its decision to the 2026 federal loan limits; several decisions predate them.</p>
+<article class="example" id="asbury-seminary" aria-labelledby="asbury-seminary-h">
+<h3 id="asbury-seminary-h">Asbury Theological Seminary, Kentucky</h3>
+<ul class="tags"><li>Stopped offering federal loans</li><li>Gives its own reason</li></ul>
+<p class="headline">Asbury Theological Seminary will phase out federal student loans, starting at the end of this academic year.</p>
+<p class="explain">Asbury Theological Seminary in Kentucky announced it will phase out federal loans and rely on scholarships and other help instead. The seminary&#x27;s president says the change is about long-term stewardship, wider access and not adding to students&#x27; debt. College leaders told the reporter it was not a response to any particular change in federal loan programs.</p>
+<figure class="shot"><a class="shot-link" style="max-width:647px" href="shots/asbury-seminary.png" aria-label="Open the screenshot larger"><img src="shots/asbury-seminary.png" width="1266" height="658" alt="Screenshot of the source page. Asbury Theological Seminary will phase out federal student loans, starting at the end of this academic year." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>Asbury Theological Seminary in Kentucky has announced it will change its financial model to “phase out” the use of federal loans, the institution announced on Tuesday.</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>All students (about 1,700 graduate students per the article)</dd><dt>Amount or terms</dt><dd>Will no longer process federal loans from the end of the 2026-27 academic year; relies on scholarship support instead</dd><dt>Date on the page</dt><dd>2026-09-16 (from the article URL; text says announced &quot;on Tuesday&quot;, i.e. 2026-09-15)</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.insidehighered.com/news/institutions/religious-colleges/2026/09/16/asbury-will-stop-taking-federal-loans#:~:text=Asbury%20Theological%20Seminary%20in%20Kentucky%20has%20announced%20it%20will%20change%20its%20financial%20model%20to%20%E2%80%9Cphase%20out%E2%80%9D%20the%20use%20of%20federal%20loans%2C%20the%20institution%20announced%20on%20Tuesday." target="_blank" rel="noopener">Asbury Will Stop Taking Federal Loans (opens at the highlighted sentence)</a> (A news article, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>Source is the Inside Higher Ed article, not Asbury&#x27;s own page. The article says leaders did not act because of changes to federal loan programs, so this must not be linked to the 2026 loan limits. The article does mention the new earnings test in context, as a separate point. Not a school-set limit; a phase-out of the whole loan program. Announcement is within the evidence window. Frame shows the article text without its headline (the headline is too far above the sentence to fit). Retaken 2026-11-24 with the styled page (no blocked stylesheet or font hosts).</p></div>
+</article>
+<article class="example" id="nash-cc" aria-labelledby="nash-cc-h">
+<h3 id="nash-cc-h">Nash Community College, North Carolina</h3>
+<ul class="tags"><li>Stopped offering federal loans</li><li>Gives its own reason</li></ul>
+<p class="headline">Nash Community College stops taking part in the federal Direct Loan program from Fall 2026.</p>
+<p class="explain">Nash Community College in North Carolina will no longer offer new federal student loans beginning with the Fall 2026 semester. Pell Grants, work-study and scholarships continue. The college&#x27;s president says the move supports students finishing without unnecessary debt.</p>
+<figure class="shot"><a class="shot-link" style="max-width:902px" href="shots/nash-cc.png" aria-label="Open the screenshot larger"><img src="shots/nash-cc.png" width="1776" height="1238" alt="Screenshot of the source page. Nash Community College stops taking part in the federal Direct Loan program from Fall 2026." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>Nash Community College will no longer participate in the Federal Direct Student Loan Program beginning with the Fall 2026 semester, reinforcing the college’s commitment to affordability and responsible financial planning for students.</p><p>After careful review, we believe this decision aligns with our responsibility to support students in completing their education without taking on unnecessary debt.</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>All students</dd><dt>Amount or terms</dt><dd>No new federal student loans from Fall 2026; Pell Grants, Federal Work-Study, NextNC Scholarship and foundation scholarships continue</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.nashcc.edu/press-releases/nash-community-college-to-end-federal-student-loans-in-fall-2026/#:~:text=Nash%20Community%20College%20will%20no%20longer%20participate%20in%20the%20Federal%20Direct%20Student%20Loan%20Program%20beginning%20with%20the%20Fall%202026%20semester%2C%20reinforcing%20the%20college%E2%80%99s%20commitment%20to%20affordability%20and%20responsible%20financial%20planning%20for%20students." target="_blank" rel="noopener">Nash Community College to End Federal Student Loans in Fall 2026 - Nash Community College (opens at the highlighted sentence)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>The page shows no date. Effective date (Fall 2026) is after the evidence-window start, but the announcement date could not be confirmed from the page. The page gives no link to the 2026 federal loan limits. The page also says other regional institutions are &#x27;reevaluating student loan participation&#x27; to reduce student debt. Retaken 2026-11-24 with the styled page; the frame starts at the first highlighted sentence and does not include the page title.</p></div>
+</article>
+<article class="example" id="edgecombe-cc" aria-labelledby="edgecombe-cc-h">
+<h3 id="edgecombe-cc-h">Edgecombe Community College, North Carolina</h3>
+<ul class="tags"><li>Stopped offering federal loans</li><li>Gives its own reason</li></ul>
+<p class="headline">Edgecombe Community College leaves the federal Direct Loan program after the Summer 2026 term.</p>
+<p class="explain">Edgecombe Community College in North Carolina will stop taking part in the federal Direct Loan program after Summer 2026. It will not originate or certify Direct Subsidized or Unsubsidized Loans for terms starting Fall 2026. The college says it is focusing on reducing student debt and expanding grants, scholarships and other lower-cost options.</p>
+<figure class="shot"><a class="shot-link" style="max-width:1204px" href="shots/edgecombe-cc.png" aria-label="Open the screenshot larger"><img src="shots/edgecombe-cc.png" width="2380" height="896" alt="Screenshot of the source page. Edgecombe Community College leaves the federal Direct Loan program after the Summer 2026 term." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>Edgecombe Community College will discontinue participation in the Federal Direct Loan Program after the Summer 2026 term. The College will no longer originate or certify Federal Direct Subsidized or Unsubsidized Loans for enrollment periods beginning Fall 2026 and beyond.</p><p>The College is focusing on reducing student debt and expanding access to grants, scholarships, payment plans, employer sponsorships, veterans’ education benefits, and other lower-cost funding options to support student success and completion.</p></blockquote>
+<p class="find"><strong>How to see it on the page:</strong> Click the numbered panels headed &quot;What is changing?&quot; and &quot;Why is ECC exiting the Direct Loan Program?&quot; in the FAQ list.</p>
+<dl class="facts"><dt>Programs covered</dt><dd>All students (Federal Direct Subsidized and Unsubsidized Loans)</dd><dt>Amount or terms</dt><dd>No Direct loans for enrollment periods beginning Fall 2026; students enrolled through Summer 2026 who accepted loans for that term may still receive them</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://edgecombe.edu/federal-direct-loan-program-exit-frequently-asked-questions-faq/" target="_blank" rel="noopener">Federal Direct Loan Program Exit – Frequently Asked Questions (FAQ) - Edgecombe Community College (opens the page; the sentence is inside a collapsed section, see above)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<div class="caveats"><h4>Caveats</h4><p>The answers sit in collapsed FAQ panels; the capture tool opened them by forcing styles, so the page may look slightly different from what a visitor sees. The page shows no date. No link to the 2026 federal loan limits is made on the page. Retaken 2026-11-24; the frame shows the first four FAQ questions, with the two answers highlighted.</p></div>
+</article>
+<article class="example" id="brazosport-college" aria-labelledby="brazosport-college-h">
+<h3 id="brazosport-college-h">Brazosport College, Texas</h3>
+<ul class="tags"><li>Stopped offering federal loans</li><li>Gives its own reason</li></ul>
+<p class="headline">Brazosport College stops taking part in the federal Direct Student Loan Program from Fall 2026.</p>
+<p class="explain">Brazosport College in Texas will no longer take part in the federal Direct Student Loan Program beginning with the Fall 2026 semester. The college says only a small share of its students have borrowed and most can pay through grants, scholarships and other aid.</p>
+<figure class="shot"><a class="shot-link" style="max-width:616px" href="shots/brazosport-college.png" aria-label="Open the screenshot larger"><img src="shots/brazosport-college.png" width="1204" height="1028" alt="Screenshot of the source page. Brazosport College stops taking part in the federal Direct Student Loan Program from Fall 2026." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>Beginning with the Fall 2026 semester, Brazosport College will no longer participate in the Federal Direct Student Loan Program and will not originate or certify new federal student loans for students attending the institution.</p><p>Historically, only a small percentage of Brazosport College students have utilized federal student loans. Because most students are able to fund their education through federal grants, scholarships, and other financial aid resources, the college has elected to discontinue participation in the Federal Direct Loan Program.</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>All students</dd><dt>Amount or terms</dt><dd>No new federal student loans originated or certified from Fall 2026</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.brazosport.edu/loans/#:~:text=Beginning%20with%20the%20Fall%202026%20semester%2C%20Brazosport%20College%20will%20no%20longer%20participate%20in%20the%20Federal%20Direct%20Student%20Loan%20Program%20and%20will%20not%20originate%20or%20certify%20new%20federal%20student%20loans%20for%20students%20attending%20the%20institution." target="_blank" rel="noopener">Federal Student Loan Program Update | Brazosport College (opens at the highlighted sentence)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>The page shows no announcement date. It makes no link to the 2026 federal loan limits. The second passage is two sentences in one paragraph. Retaken 2026-11-24 with the styled page.</p></div>
+</article>
+<article class="example" id="glendale-cc-parent-plus" aria-labelledby="glendale-cc-parent-plus-h">
+<h3 id="glendale-cc-parent-plus-h">Glendale Community College (California), California</h3>
+<ul class="tags"><li>Stopped offering federal loans</li><li>Gives no reason</li></ul>
+<p class="headline">Glendale Community College no longer offers Federal Direct PLUS Loans to parents from 2026-27.</p>
+<p class="explain">Glendale Community College in California says that from the 2026-2027 award year, Federal Direct PLUS Loans will no longer be available to parents of dependent students. The announcement gives no reason. It points families to grants, scholarships and work-study.</p>
+<figure class="shot"><a class="shot-link" style="max-width:776px" href="shots/glendale-cc-parent-plus.png" aria-label="Open the screenshot larger"><img src="shots/glendale-cc-parent-plus.png" width="1524" height="924" alt="Screenshot of the source page. Glendale Community College no longer offers Federal Direct PLUS Loans to parents from 2026-27." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>Beginning with the 2026-2027 Award Year, Federal Direct PLUS Loans will no longer be available to parents of dependent students attending GCC.</p></blockquote>
+<p class="find"><strong>How to see it on the page:</strong> Click the &quot;Parent Plus Update&quot; item on the Financial Aid Announcements page to open the notice headed &quot;Glendale Community College will no longer participate in the Federal Direct PLUS Loan Program&quot;.</p>
+<dl class="facts"><dt>Programs covered</dt><dd>Parents of dependent students (Parent PLUS); the page does not say student Direct Loans are affected</dd><dt>Amount or terms</dt><dd>Federal Direct PLUS Loans no longer available to parents of dependent students from the 2026-2027 award year</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.glendale.edu/financial-aid/announcements-and-events.html" target="_blank" rel="noopener">Financial Aid Announcements (opens the page; the sentence is inside a collapsed section, see above)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<div class="caveats"><h4>Caveats</h4><p>The notice is in a collapsed panel; the tool opened it by forcing styles. The page shows no date. No reason is given and no link to the 2026 federal loan limits is made. I did not open the second Glendale page named in the candidate notes. Retaken 2026-11-24; the frame includes the notice heading.</p></div>
+</article>
+<article class="example" id="sum-bible-college" aria-labelledby="sum-bible-college-h">
+<h3 id="sum-bible-college-h">SUM Bible College and Theological Seminary, California</h3>
+<ul class="tags"><li>Stopped offering federal loans</li><li>Gives its own reason</li></ul>
+<p class="headline">SUM Bible College stopped offering federal student loans from Fall 2025 and moved to flat low tuition.</p>
+<p class="explain">SUM Bible College and Theological Seminary no longer offers federal student loans beginning Fall 2025. It replaced them with a flat tuition of $1,600 per term for all U.S. students. The college says it wants education without the burden of student loan debt.</p>
+<figure class="shot"><a class="shot-link" style="max-width:827px" href="shots/sum-bible-college.png" aria-label="Open the screenshot larger"><img src="shots/sum-bible-college.png" width="1626" height="1746" alt="Screenshot of the source page. SUM Bible College stopped offering federal student loans from Fall 2025 and moved to flat low tuition." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>While SUM will no longer offer federal student loans beginning Fall 2025, we continue to offer Pell Grants for qualifying undergraduate students who complete the FAFSA.</p><p>SUM Bible College and Theological Seminary is committed to offering an affordable, Spirit-empowered education that equips students to fulfill their calling—without the burden of student loan debt.</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>All students</dd><dt>Amount or terms</dt><dd>No federal student loans from Fall 2025; flat tuition of $1,600 per term for all U.S. students; Pell Grants continue for eligible undergraduates</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.sum.edu/financialaid/tuition/#:~:text=While%20SUM%20will%20no%20longer%20offer%20federal%20student%20loans%20beginning%20Fall%202025%2C%20we%20continue%20to%20offer%20Pell%20Grants%20for%20qualifying%20undergraduate%20students%20who%20complete%20the%20FAFSA." target="_blank" rel="noopener">Tuition - SUM Bible College and Theological Seminary (opens at the highlighted sentence)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>The page shows no announcement date; the change takes effect Fall 2025, and the decision likely predates the evidence window start (2025-07-04) but that is not shown on the page. It makes no link to the 2026 federal loan limits. The reason quote was read in find mode (exact text, using a hyphen where the page may show a dash). Retaken 2026-11-24. The frame now shows the page section heading and both highlighted passages: the school&#x27;s mission sentence (&#x27;without the burden of student loan debt&#x27;) at the top and the sentence ending federal loans at the bottom. The page&#x27;s own wording is &#x27;student loan debt&#x27;; the tool matched it with an em dash between &#x27;calling&#x27; and &#x27;without&#x27;. The second sentence says Pell Grants are for undergraduates; the page does not say whether SUM has graduate students affected. PREDATES THE FEDERAL LAW: this is a Fall 2025 policy, set as of the 2025-26 year and described on the page without any reference to the 2026 federal loan limits; the page gives no announcement date, but the decision is treated as predating the July 4, 2025 law (P.L. 119-21) and must not be shown as a response to it.</p></div>
+</article>
+<article class="example" id="bethany-seminary" aria-labelledby="bethany-seminary-h">
+<h3 id="bethany-seminary-h">Bethany Theological Seminary, Indiana</h3>
+<ul class="tags"><li>Stopped offering federal loans</li><li>Gives its own reason</li></ul>
+<p class="headline">Bethany Theological Seminary&#x27;s board approved a plan to leave the federal student loan program in September 2026.</p>
+<p class="explain">The board of Bethany Theological Seminary in Indiana approved a plan to leave the federal student loan program at its September 18-20, 2026 meeting. The seminary says no student has borrowed through the program for five semesters. Its president says the aim is a path to complete an education without additional debt.</p>
+<figure class="shot"><a class="shot-link" style="max-width:1146px" href="shots/bethany-seminary.png" aria-label="Open the screenshot larger"><img src="shots/bethany-seminary.png" width="2264" height="886" alt="Screenshot of the source page. Bethany Theological Seminary&#x27;s board approved a plan to leave the federal student loan program in September 2026." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>The Bethany Theological Seminary Board of Trustees gave approval to a plan for the institution to leave federal student loan program, known as Title IV, during its Fall meeting, September 18-20, 2026, at the Seminary’s Richmond, Indiana campus.</p><p>The decision to leave Title IV, the program that allows students to take out Federal student loans, follows five semesters in which not a single Bethany student has borrowed money through the program.</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>All students</dd><dt>Amount or terms</dt><dd>Board approved a plan to leave Title IV (the federal student loan program); the page gives no effective date</dd><dt>Date on the page</dt><dd>September 18-20, 2026 (board meeting)</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://bethanyseminary.edu/board-approves-plan-to-leave-federal-student-loan-program/#:~:text=The%20Bethany%20Theological%20Seminary%20Board%20of%20Trustees%20gave%20approval%20to%20a%20plan%20for%20the%20institution%20to%20leave%20federal%20student%20loan%20program%2C%20known%20as%20Title%20IV%2C%20during%20its%20Fall%20meeting%2C%20September%2018%2D20%2C%202026%2C%20at%20the%20Seminary%E2%80%99s%20Richmond%2C%20Indiana%20campus." target="_blank" rel="noopener">Board Approves Plan to Leave Federal Student Loan Program | Bethany Theological Seminary (opens at the highlighted sentence)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>It is a plan; the page gives no date for leaving. It makes no link to the 2026 federal loan limits. Quote uses the page&#x27;s own wording (&#x27;leave federal student loan program&#x27;). Retaken 2026-11-24; the frame includes the page headline and both highlighted passages.</p></div>
+</article>
+<article class="example" id="san-bernardino-valley-parent-plus" aria-labelledby="san-bernardino-valley-parent-plus-h">
+<h3 id="san-bernardino-valley-parent-plus-h">San Bernardino Valley College, California</h3>
+<ul class="tags"><li>Stopped offering federal loans</li><li>Gives no reason</li></ul>
+<p class="headline">San Bernardino Valley College&#x27;s 2026-27 loan sheet says it does not take part in Parent PLUS; it still offers student Direct Loans.</p>
+<p class="explain">San Bernardino Valley College&#x27;s 2026-27 Federal Direct Student Loan Information sheet says the college does not take part in the Parent PLUS Loan Program. The college&#x27;s Types of Aid page shows students can still apply for Direct Loans. Nothing read shows this is new for 2026-27, so it is not clearly a stopped-lending example.</p>
+<figure class="shot"><a class="shot-link" style="max-width:451px" href="shots/san-bernardino-valley-parent-plus.png" aria-label="Open the screenshot larger"><img src="shots/san-bernardino-valley-parent-plus.png" width="874" height="286" alt="Screenshot of the source page. San Bernardino Valley College&#x27;s 2026-27 loan sheet says it does not take part in Parent PLUS; it still offers student Direct Loans." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>SBVC does not participate in the Parent PLUS Loan Program.</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>Parent PLUS borrowers; the college offers student Direct Loans</dd><dt>Date on the page</dt><dd>2026-2027 (sheet title)</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.valleycollege.edu/financial-aid/documents/2026-2027_direct_loan_information.pdf#page=2" target="_blank" rel="noopener">San Bernardino Valley College | Federal Direct Student Loan Information | 2026-2027 (PDF, opens at page 2)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<div class="caveats"><h4>Caveats</h4><p>The source is a PDF (the college&#x27;s 2026-2027 Federal Direct Student Loan Information sheet), not a web page; the image is a rendering of the PDF page with the highlight drawn on it. The college still offers other federal loans (the sheet lists Direct Loan limits for students). The sheet gives no date for when Parent PLUS ended and no reason; nothing shows the Parent PLUS exclusion is new for 2026-27. The sentence is a footnote on the borrowing-limits table (the table is on page 1).</p></div>
+</article>
+<article class="example" id="pitt-cc" aria-labelledby="pitt-cc-h">
+<h3 id="pitt-cc-h">Pitt Community College, North Carolina</h3>
+<ul class="tags"><li>Stopped offering federal loans</li><li>Gives its own reason</li></ul>
+<p class="headline">Pitt Community College told students in June 2025 it would stop offering federal student loans from the fall.</p>
+<p class="explain">WITN reported on June 20, 2025 that Pitt Community College would no longer be part of the federal student loan program, starting in the fall. The college letter quoted by WITN cites growing concern over student loan debt nationwide. This is before the evidence window starts and has no tie to the 2026 federal loan limits.</p>
+<figure class="shot"><a class="shot-link" style="max-width:963px" href="shots/pitt-cc.png" aria-label="Open the screenshot larger"><img src="shots/pitt-cc.png" width="1898" height="618" alt="Screenshot of the source page. Pitt Community College told students in June 2025 it would stop offering federal student loans from the fall." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>WINTERVILLE, N.C. (WITN) - Pitt Community College says it will no longer be part of the federal student loan program.</p><p>PCC says starting in the fall, federal student loans will no longer be part of its financial aid package.</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>All students</dd><dt>Amount or terms</dt><dd>Federal student loans no longer part of the financial aid package starting in the fall (2025)</dd><dt>Date on the page</dt><dd>2025-06-20 (from the article URL)</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.witn.com/2025/06/20/pitt-community-college-opts-out-federal-student-loan-program/#:~:text=WINTERVILLE%2C%20N.C.%20%28WITN%29%20%2D%20Pitt%20Community%20College%20says%20it%20will%20no%20longer%20be%20part%20of%20the%20federal%20student%20loan%20program." target="_blank" rel="noopener">Pitt Community College opts out of federal student loan program (opens at the highlighted sentence)</a> (A news article, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>The college&#x27;s own site was not tried because its host is not among the approved hosts. The announcement (2025-06-20) is before the evidence window (2025-07-04) and predates the 2026 loan limits, so it is background only. The article says the college was one of 14 of 58 NC community colleges that offered federal loans. Frame shows the article text without its headline (the headline is too far above the sentence to fit). PREDATES THE FEDERAL LAW: the article is dated June 20, 2025, two weeks before P.L. 119-21 was signed (July 4, 2025), so the college&#x27;s decision predates the law and was not a response to it. Retaken 2026-11-24 with the styled page.</p></div>
+</article>
+</section>
+<section class="group" id="section-lending" aria-labelledby="section-lending-h"><h2 id="section-lending-h">Schools lending their own money</h2>
+<article class="example" id="ku-law-j-helps" aria-labelledby="ku-law-j-helps-h">
+<h3 id="ku-law-j-helps-h">University of Kansas School of Law, Kansas</h3>
+<ul class="tags"><li>School-funded loan</li></ul>
+<p class="headline">Kansas law school lends its own endowment money, at 5 percent, to students who exceed the federal caps.</p>
+<p class="explain">The University of Kansas School of Law offers a loan called J-HELPS through KU Endowment for law students whose borrowing goes past the federal limits of $50,000 a year and $200,000 in total. The rate is a fixed 5 percent, with no cosigner, and the school&#x27;s page lists a 2 percent origination fee. Inside Higher Ed ties the program to the new federal loan limits.</p>
+<figure class="shot"><a class="shot-link" style="max-width:616px" href="shots/ku-law-j-helps.png" aria-label="Open the screenshot larger"><img src="shots/ku-law-j-helps.png" width="1204" height="1240" alt="Screenshot of the source page. Kansas law school lends its own endowment money, at 5 percent, to students who exceed the federal caps." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>With the Jayhawk Endowment Law Program for Students (J-HELPS), any KU Law student whose borrowing exceeds these caps will be able to finance the remaining amount with a low interest, no cosigner loan from KU Endowment.</p><p>2% loan origination fees apply</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>Full-time KU Law students with a minimum 2.0 GPA, U.S. citizens and permanent residents whose costs exceed the federal borrowing caps; JD students who have fully participated in the federal loan program may apply</dd><dt>Amount or terms</dt><dd>5% fixed interest rate; up to $12,000 per year with an aggregate of $24,000 over three years; no cosigner; no payments while in law school; five month forbearance after graduation; 10-year loan term; 2% loan origination fees apply (all as listed on the school&#x27;s program page)</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://law.ku.edu/admissions/tuition-scholarships/loan-program#:~:text=With%20the%20Jayhawk%20Endowment%20Law%20Program%20for%20Students%20%28J%2DHELPS%29%2C%20any%20KU%20Law%20student%20whose%20borrowing%20exceeds%20these%20caps%20will%20be%20able%20to%20finance%20the%20remaining%20amount%20with%20a%20low%20interest%2C%20no%20cosigner%20loan%20from%20KU%20Endowment." target="_blank" rel="noopener">Loan Program | KU School of Law (opens at the highlighted sentence)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>The scout reported that KU pages disagree about a 2 percent origination fee and application timing. In the pages I could read (law.ku.edu/loan-program, law.ku.edu/loans which redirects to it, and the news release dated 01/25/2026) the fee is stated consistently as 2%; I did not see a page that says there is no fee. The Inside Higher Ed article describes KU&#x27;s program as &#x27;will draw&#x27; and &#x27;launching&#x27; (March 2026); the program page says &#x27;Application ... is now open&#x27;. kuendowment.org is blocked, so the endowment&#x27;s own page could not be compared. The program page is undated. The page also says the school does not expect any KU Law student to exceed the $12,000/$24,000 limits, and that students who received Grad PLUS before July 1, 2026 are not subject to the new caps. The tie to the federal limits is explicit in the school&#x27;s news release (&#x27;offered in response to new federal student loan rules&#x27;) and in the Inside Higher Ed article of 2026-03-26. Retaken 2026-11-24 with the styled page; the page heading is above the frame. The second highlighted passage (the 2% origination fee) is at the bottom of the frame.</p></div>
+</article>
+<article class="example" id="washu-law-supplemental-loan" aria-labelledby="washu-law-supplemental-loan-h">
+<h3 id="washu-law-supplemental-loan-h">Washington University in St. Louis School of Law, Missouri</h3>
+<ul class="tags"><li>School-funded loan</li></ul>
+<p class="headline">Washington University&#x27;s law school lends its own money at a fixed 7.5 percent with no origination fee.</p>
+<p class="explain">Inside Higher Ed reports that the WashU Law Supplemental Loan is funded by the institution and carries a fixed 7.5 percent interest rate, below the 7.94 percent federal graduate loan rate. The law school&#x27;s financial aid director said it chose a rate that was reasonable in the market without an origination fee. The article presents the loan as a response to the new federal loan limits.</p>
+<figure class="shot"><a class="shot-link" style="max-width:647px" href="shots/washu-law-supplemental-loan.png" aria-label="Open the screenshot larger"><img src="shots/washu-law-supplemental-loan.png" width="1266" height="1234" alt="Screenshot of the source page. Washington University&#x27;s law school lends its own money at a fixed 7.5 percent with no origination fee." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>KU’s loan program, the Jayhawk Endowment Law Program for Students, or J-HELPS, will draw from the institution’s endowment and has a fixed interest rate of 5 percent. Meanwhile, the WashU Law Supplemental Loan, which is institutionally funded, will have a 7.5 percent interest rate.</p><p>WUSTL aimed “to set a fixed interest rate that was reasonable in the current market without imposing an origination fee,”</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>Law students (the article says law students who have already exhausted their federal student loan options)</dd><dt>Amount or terms</dt><dd>7.5 percent fixed interest rate; no origination fee (as stated in Inside Higher Ed). The candidate&#x27;s $25,000 a year cap, no credit check or collateral, and not PSLF-eligible come from search extracts and could not be checked on the school page.</dd><dt>Date on the page</dt><dd>March 26, 2026</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.insidehighered.com/news/students/financial-aid/2026/03/26/law-schools-become-lenders-response-obbba-loan-limits#:~:text=KU%E2%80%99s%20loan%20program%2C%20the%20Jayhawk%20Endowment%20Law%20Program%20for%20Students%2C%20or%20J%2DHELPS%2C%20will%20draw%20from%20the%20institution%E2%80%99s%20endowment%20and%20has%20a%20fixed%20interest%20rate%20of%205%20percent.%20Meanwhile%2C%20the%20WashU%20Law%20Supplemental%20Loan%2C%20which%20is%20institutionally%20funded%2C%20will%20have%20a%207.5%20percent%20interest%20rate." target="_blank" rel="noopener">Law Schools Become Lenders in Response to OBBBA Loan Limits (opens at the highlighted sentence)</a> (A news article, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>The school&#x27;s own page (law.washu.edu, both the news URL and ?p=8828) returned HTTP 403 with a &#x27;Just a moment...&#x27; challenge page, so nothing could be read or captured from it. The article says the law school &#x27;plans to lend&#x27; / is &#x27;launching&#x27; (article date 2026-03-26), so whether disbursements had begun is not stated. Source is the fallback Inside Higher Ed article, which is also the source of the tie to the federal limits. Quotes use the article&#x27;s curly quotation marks. Frame shows the article text without its headline (the headline is too far above the sentence to fit). Retaken 2026-11-24. The two highlighted passages are about 8 lines apart, so the frame includes an empty advertisement slot (a broken-image placeholder) between them.</p></div>
+</article>
+<article class="example" id="midwestern-mwu-loan" aria-labelledby="midwestern-mwu-loan-h">
+<h3 id="midwestern-mwu-loan-h">Midwestern University, Illinois and Arizona</h3>
+<ul class="tags"><li>School-funded loan</li></ul>
+<p class="headline">Midwestern promotes its own long-running MWU Loan, at a fixed 7 percent with no origination fee, as federal limits arrive.</p>
+<p class="explain">Midwestern University&#x27;s own news release says the MWU Loan was created for its students to cover costs that federal aid and other financing do not. The release, published June 26, 2026, points to the federal limits that begin July 1, 2026 and says recent updates let a student with a 660 credit score qualify without a cosigner. The loan is not new: the school&#x27;s pages show it already running before the law passed.</p>
+<figure class="shot"><a class="shot-link" style="max-width:805px" href="shots/midwestern-mwu-loan.png" aria-label="Open the screenshot larger"><img src="shots/midwestern-mwu-loan.png" width="1582" height="1240" alt="Screenshot of the source page. Midwestern promotes its own long-running MWU Loan, at a fixed 7 percent with no origination fee, as federal limits arrive." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>The MWU Loan was created specifically for Midwestern University students to provide additional funding when federal aid and other financing options do not fully cover the cost of attendance.</p><p>Unlike many private lending options, the MWU Loan offers a fixed 7% interest rate, no origination fees, and eligibility standards designed specifically for graduate healthcare students.</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>Full-time Midwestern University students (graduate and professional healthcare programs); borrowing limits are program-specific</dd><dt>Amount or terms</dt><dd>Fixed 7% interest rate and no origination fees; a student with a credit score as low as 660 may qualify independently, reducing the need for a cosigner. Rates on the school&#x27;s related page: 7.00% for loans first disbursed on or after January 13, 2026 and 6.75% for loans first disbursed March 1, 2025 to January 12, 2026. Annual limit &#x27;varies&#x27;.</dd><dt>Date on the page</dt><dd>June 26, 2026</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.midwestern.edu/news-stories/midwestern-expands-student-financial-support-graduate-borrowing-rules-change#:~:text=The%20MWU%20Loan%20was%20created%20specifically%20for%20Midwestern%20University%20students%20to%20provide%20additional%20funding%20when%20federal%20aid%20and%20other%20financing%20options%20do%20not%20fully%20cover%20the%20cost%20of%20attendance." target="_blank" rel="noopener">Midwestern Expands Student Financial Support as Graduate Borrowing Rules Change | Midwestern University (opens at the highlighted sentence)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>Predates the law: yes. A companion Midwestern page dated January 21, 2026 says the MWU Loan &#x27;remains one of the University&#x27;s most dependable financing options&#x27; and lists a 6.75% rate for loans first disbursed from March 1, 2025, i.e. before enactment on 2025-07-04; the school&#x27;s student-loans page says the servicer ECSI has serviced its institutional loan programs &#x27;since 2003&#x27; and calls institutional loan programs &#x27;revolving loan funds&#x27;. No creation date for the MWU Loan itself was found on the pages. The source of the loan capital is not stated beyond &#x27;institutional&#x27;. The same student-loans page contains a collapsed (hidden) item saying &#x27;5% interest will accrue on the loan after graduation&#x27;, which may belong to another institutional loan; it disagrees with the 7% on the news release and I could not tell which loan it describes. Retaken 2026-11-24 with the styled page; the page headline is above the frame.</p></div>
+</article>
+<article class="example" id="saint-louis-university-stopgap" aria-labelledby="saint-louis-university-stopgap-h">
+<h3 id="saint-louis-university-stopgap-h">Saint Louis University, Missouri</h3>
+<ul class="tags"><li>Emergency or bridge loan</li></ul>
+<p class="headline">Saint Louis University is giving stopgap supplemental and emergency grants and loans to students hit by the new loan rules.</p>
+<p class="explain">Inside Higher Ed reports that Saint Louis University is offering stopgap supplemental and emergency grants and loans to students whose federal loan access was cut. The article does not separate the grants from the loans and gives no amounts or terms. It adds that not every college can do this and that it is not a long-term solution.</p>
+<figure class="shot"><a class="shot-link" style="max-width:647px" href="shots/saint-louis-university-stopgap.png" aria-label="Open the screenshot larger"><img src="shots/saint-louis-university-stopgap.png" width="1266" height="718" alt="Screenshot of the source page. Saint Louis University is giving stopgap supplemental and emergency grants and loans to students hit by the new loan rules." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>SLU is providing stopgap solutions like supplemental and emergency grants and loans to help students whose loan access has been curtailed by the new rules.</p><p>But not all colleges can do that, and even for those that can, it’s not a long-term solution.</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>Students whose loan access has been curtailed by the new federal rules (the article does not list programs)</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.insidehighered.com/news/government/student-aid-policy/2026/09/21/students-and-colleges-grapple-new-loan-limits#:~:text=SLU%20is%20providing%20stopgap%20solutions%20like%20supplemental%20and%20emergency%20grants%20and%20loans%20to%20help%20students%20whose%20loan%20access%20has%20been%20curtailed%20by%20the%20new%20rules." target="_blank" rel="noopener">Students and Colleges Grapple With New Loan Limits (opens at the highlighted sentence)</a> (A news article, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>Not a school page; the school&#x27;s own statement was not seen. The article lumps grants and loans together, so it is not shown that any of the money is a loan, nor its terms, funding source, or whether the funds predate the law. Frame shows the article text without its headline (the headline is too far above the sentence to fit). Retaken 2026-11-24.</p></div>
+</article>
+<article class="example" id="uc-davis-dnp-na-forgivable-loan" aria-labelledby="uc-davis-dnp-na-forgivable-loan-h">
+<h3 id="uc-davis-dnp-na-forgivable-loan-h">UC Davis Health, Betty Irene Moore School of Nursing, California</h3>
+<ul class="tags"><li>Forgivable loan</li></ul>
+<p class="headline">UC Davis Health offers up to ten nurse anesthesia students loans forgiven by three years of work there.</p>
+<p class="explain">UC Davis Health lends up to ten first-year nurse anesthesia students the cost of their second- and third-year tuition and fees. The loan is forgiven if the graduate works full time as a nurse anesthetist at UC Davis Health for three years. The page ties it to recruiting its own anesthetists and does not mention the federal loan limits.</p>
+<figure class="shot"><a class="shot-link" style="max-width:807px" href="shots/uc-davis-dnp-na-forgivable-loan.png" aria-label="Open the screenshot larger"><img src="shots/uc-davis-dnp-na-forgivable-loan.png" width="1586" height="1208" alt="Screenshot of the source page. UC Davis Health offers up to ten nurse anesthesia students loans forgiven by three years of work there." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>UC Davis Health is offering up to ten forgivable loans to students in the DNP-NA degree program (Loan Program).</p><p>Service commitment: Loan forgiveness is in exchange for 3 years of full-time employment service credit as a CRNA at UC Davis Health</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>Up to ten Year 1 students in the 2025-2028 cohort of the Doctor of Nursing Practice - Nurse Anesthesia (DNP-NA) program</dd><dt>Amount or terms</dt><dd>Forgives Year 2 and Year 3 tuition and fees in exchange for 3 years (36 months) of full-time service as a CRNA at UC Davis Health; the loan accrues interest at 5% a year and is due over ten years beginning 180 days after a repayment condition is triggered (for example, leaving the program or leaving UC Davis Health employment before 36 months); for the class of 2028, annual tuition and fees $51,666, total loan principal $103,332 less about 10% School of Nursing support</dd><dt>Date on the page</dt><dd>Applications 2026: March 30 - April 10, 2026 (previous 2026 enrollment dates); page says applications are currently closed and to check back for 2027 dates</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://health.ucdavis.edu/nursing/academics/programs/dnp-na-loan-program.html#:~:text=UC%20Davis%20Health%20is%20offering%20up%20to%20ten%20forgivable%20loans%20to%20students%20in%20the%20DNP%2DNA%20degree%20program%20%28Loan%20Program%29." target="_blank" rel="noopener">UC Davis Health 2026 Loan Program for the DNP-Nurse Anesthesia | Betty Irene Moore School of Nursing (opens at the highlighted sentence)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>Page does not mention the federal loan limits, Grad PLUS or the new law, so no link to the limits is shown; it is an employer-recruitment program and the page does not say whether it predates 2025. The page title reads &#x27;2026 Loan Program&#x27; and refers to &#x27;2027 application dates&#x27;, so it appears to be a yearly offering. Keep only as a forgivable-loan example. Retaken 2026-11-24. Both stored passages are highlighted in the frame.</p></div>
+</article>
+</section>
+<section class="group" id="section-planned" aria-labelledby="section-planned-h"><h2 id="section-planned-h">Schools that announced a loan of their own, not yet running</h2>
+<p class="group-note">These schools have said they plan to lend to students or arrange a loan for them. No such loan was running when their pages were captured.</p>
+<article class="example" id="university-of-florida-expanding-loan" aria-labelledby="university-of-florida-expanding-loan-h">
+<h3 id="university-of-florida-expanding-loan-h">University of Florida, Florida</h3>
+<ul class="tags"><li>Planned or announced, not yet running</li></ul>
+<p class="headline">University of Florida says it is looking at expanding its institution loan program as federal options shrink.</p>
+<p class="explain">At a Board of Trustees meeting, a University of Florida vice president said the university is looking at expanding its institution loan program and will help students find private loans. Inside Higher Ed reports this in December 2025. No new program, amount or terms had been announced.</p>
+<figure class="shot"><a class="shot-link" style="max-width:647px" href="shots/university-of-florida-expanding-loan.png" aria-label="Open the screenshot larger"><img src="shots/university-of-florida-expanding-loan.png" width="1266" height="1000" alt="Screenshot of the source page. University of Florida says it is looking at expanding its institution loan program as federal options shrink." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>Parker said UF is also “looking at the expansion of our institution loan program” and the university will also help students identify private loan options.</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>Graduate students in general (the article does not specify programs)</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.insidehighered.com/news/business/academic-programs/2025/12/15/grad-programs-brace-loan-caps#:~:text=Parker%20said%20UF%20is%20also%20%E2%80%9Clooking%20at%20the%20expansion%20of%20our%20institution%20loan%20program%E2%80%9D%20and%20the%20university%20will%20also%20help%20students%20identify%20private%20loan%20options." target="_blank" rel="noopener">Grad Programs Brace for Loan Caps (opens at the highlighted sentence)</a> (A news article, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>Intention only: &#x27;looking at the expansion&#x27;. The article identifies the speaker as Mary Parker, Vice President and Chief Enrollment Strategist, reporting a Board of Trustees meeting. The article implies UF already has an institution loan program; its terms were not seen. Frame shows the article text without its headline (the headline is too far above the sentence to fit). Retaken 2026-11-24.</p></div>
+</article>
+<article class="example" id="yale-sph-own-loan-option" aria-labelledby="yale-sph-own-loan-option-h">
+<h3 id="yale-sph-own-loan-option-h">Yale School of Public Health (Yale University), Connecticut</h3>
+<ul class="tags"><li>Planned or announced, not yet running</li></ul>
+<p class="headline">An opinion piece says Yale&#x27;s School of Public Health is developing its own loan option.</p>
+<p class="explain">An Inside Higher Ed opinion essay lists Yale&#x27;s School of Public Health among schools developing their own loan option, alongside law schools already launching institution-backed programs. It gives no amounts, terms, funding source or start date.</p>
+<figure class="shot"><a class="shot-link" style="max-width:647px" href="shots/yale-sph-own-loan-option.png" aria-label="Open the screenshot larger"><img src="shots/yale-sph-own-loan-option.png" width="1266" height="680" alt="Screenshot of the source page. An opinion piece says Yale&#x27;s School of Public Health is developing its own loan option." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>Yale’s School of Public Health is developing its own loan option</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>Not stated in the article</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.insidehighered.com/opinion/views/2026/05/07/loan-caps-steer-students-toward-private-lending-opinion#:~:text=Yale%E2%80%99s%20School%20of%20Public%20Health%20is%20developing%20its%20own%20loan%20option" target="_blank" rel="noopener">Loan Caps to Steer Students Toward Private Lending (opinion) (opens at the highlighted sentence)</a> (A news article, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>An opinion essay (dated 2026-05-07 in the URL), not news reporting and not the school&#x27;s statement. Unclear whether the school would fund the loan; Yale&#x27;s central offering that is live is the SoFi lender partnership (see yale-sofi-loan-option). Frame shows the article text without its headline (the headline is too far above the sentence to fit). Retaken 2026-11-24.</p></div>
+</article>
+<article class="example" id="xavier-com-private-loan-option" aria-labelledby="xavier-com-private-loan-option-h">
+<h3 id="xavier-com-private-loan-option-h">Xavier University College of Osteopathic Medicine, Ohio</h3>
+<ul class="tags"><li>Planned or announced, not yet running</li></ul>
+<p class="headline">Xavier&#x27;s new medical school says it is putting together a private loan option with competitive rates.</p>
+<p class="explain">Inside Higher Ed quotes the founding dean of Xavier University&#x27;s College of Osteopathic Medicine saying the school is putting together a private loan option with more competitive rates than private loans elsewhere. He also says the school has $8 million in a scholarship endowment. No lender, amount or funding source is given, and the dean&#x27;s words do not mention the federal loan limits.</p>
+<figure class="shot"><a class="shot-link" style="max-width:647px" href="shots/xavier-com-private-loan-option.png" aria-label="Open the screenshot larger"><img src="shots/xavier-com-private-loan-option.png" width="1266" height="808" alt="Screenshot of the source page. Xavier&#x27;s new medical school says it is putting together a private loan option with competitive rates." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>We’re also putting together a private loan option that will offer much more competitive interest rates compared to the private loans they’d get elsewhere.</p><p>“We have $8 million in a scholarship endowment to distribute to new students, and that continues to grow,“ said Steve Halm, founding dean of the college.</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>New osteopathic medicine students of a school that has yet to open (per the article, the founding dean speaks of distributing endowment funds to new students)</dd><dt>Amount or terms</dt><dd>&#x27;much more competitive interest rates compared to the private loans they&#x27;d get elsewhere&#x27;; no figures given</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.insidehighered.com/news/institutions/specialized-colleges/2026/06/23/medical-school-boom#:~:text=We%E2%80%99re%20also%20putting%20together%20a%20private%20loan%20option%20that%20will%20offer%20much%20more%20competitive%20interest%20rates%20compared%20to%20the%20private%20loans%20they%E2%80%99d%20get%20elsewhere." target="_blank" rel="noopener">The Medical School Boom (opens at the highlighted sentence)</a> (A news article, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>Not shown whether the school funds the loan or arranges it with a lender (&#x27;private loan option&#x27;); the weak candidate stays weak. The captured screenshot shows the quote with its closing quotation mark outside the highlight; the second passage&#x27;s closing quote in the source uses an odd opening-style mark, reproduced as matched. Frame shows the article text without its headline (the headline is too far above the sentence to fit). Retaken 2026-11-24.</p></div>
+</article>
+</section>
+<section class="group" id="section-contrast" aria-labelledby="section-contrast-h"><h2 id="section-contrast-h">For comparison: schools with no lower limit and no loan of their own</h2>
+<p class="group-note">These schools did not do what the schools above did. Some let students in the same kinds of programs borrow the full federal amount; others point students to a private lender without putting in school money. They show what the examples above are being compared with.</p>
+<article class="example" id="molloy-full-amount" aria-labelledby="molloy-full-amount-h">
+<h3 id="molloy-full-amount-h">Molloy University, New York</h3>
+<ul class="tags"><li>Offers the full federal amount</li></ul>
+<p class="headline">Molloy lets its SLP, MSN and DNP students borrow up to the $50,000 professional limit during the court stay.</p>
+<p class="explain">Molloy treats three programs, speech-language pathology, nursing MSN and nursing DNP, as professional while the court stay lasts, so students can borrow at the $50,000 limit. It warns that the Education Department could later require some of that loan to be returned, leaving a balance owed to Molloy.</p>
+<figure class="shot"><a class="shot-link" style="max-width:814px" href="shots/molloy-full-amount.png" aria-label="Open the screenshot larger"><img src="shots/molloy-full-amount.png" width="1600" height="1230" alt="Screenshot of the source page. Molloy lets its SLP, MSN and DNP students borrow up to the $50,000 professional limit during the court stay." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>As a result, some degrees previously classified as graduate degrees, and subject to the Federal Direct Unsubsidized Loan limit of $20,500 per award year, are (as of June 24, 2026) temporarily reclassified as professional degrees, and subject to the Federal Direct Unsubsidized Loan limit of $50,000 per award year.</p></blockquote>
+<p class="find"><strong>How to see it on the page:</strong> Click the panel headed &quot;Professional Students (Interim Category Due to Court Stay)&quot;.</p>
+<dl class="facts"><dt>Programs covered</dt><dd>Speech-Language Pathology (SLP), Registered Nursing (MSN), Nursing Practice (DNP)</dd><dt>Amount or terms</dt><dd>Federal Direct Unsubsidized Loan limit of $50,000 per award year during the court stay (instead of $20,500)</dd><dt>Date on the page</dt><dd>(Updated 7/29/2026)</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.molloy.edu/admissions-aid/financial-aid/26-27-one-big-beautiful-bill-changes" target="_blank" rel="noopener">26-27 One Big Beautiful Bill (OB3) Changes (opens the page; the sentence is inside a collapsed section, see above)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<div class="caveats"><h4>Caveats</h4><p>The panel was opened by the tool forcing it visible, so spacing may differ from what a visitor sees; the page&#x27;s own wording does not say &#x27;up to&#x27; but &#x27;subject to the ... limit of $50,000&#x27;. Warning sentence is below the frame. The page says students &#x27;will be left with a balance ... owed to Molloy University&#x27; if funds are returned. The panel was forced open by the tool (collapse styles removed), so spacing may differ from what a visitor sees; a visitor must click the panel. The frame has no section heading.</p></div>
+</article>
+<article class="example" id="arizona-temporary-professional" aria-labelledby="arizona-temporary-professional-h">
+<h3 id="arizona-temporary-professional-h">University of Arizona, Arizona</h3>
+<ul class="tags"><li>Offers the full federal amount</li></ul>
+<p class="headline">Arizona tells students in professional degree programs they can borrow up to $50,000 a year.</p>
+<p class="explain">Arizona&#x27;s financial aid office says students in professional degree programs can borrow up to $50,000 a year in Direct Unsubsidized loans. A June 24, 2026 court stay temporarily widened which programs count. The page warns that the rules are not final and uncertainty remains.</p>
+<figure class="shot"><a class="shot-link" style="max-width:1162px" href="shots/arizona-temporary-professional.png" aria-label="Open the screenshot larger"><img src="shots/arizona-temporary-professional.png" width="2296" height="1220" alt="Screenshot of the source page. Arizona tells students in professional degree programs they can borrow up to $50,000 a year." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>Beginning July 1, 2026, students pursuing “professional degree programs” are eligible to borrow the Federal Direct Unsubsidized loan for up to $50,000 per year.</p><p>Federal loan rules are not finalized due to the litigation and considerable uncertainty remains around how this temporary ruling impacts students.</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>Students in professional degree programs, including those temporarily expanded by the court stay (the linked program list was not read)</dd><dt>Amount or terms</dt><dd>Federal Direct Unsubsidized loan up to $50,000 per year; $200,000 aggregate; $257,500 lifetime</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://financialaid.arizona.edu/temporary-professional-student-loan-limits#:~:text=Beginning%20July%201%2C%202026%2C%20students%20pursuing%20%E2%80%9Cprofessional%20degree%20programs%E2%80%9D%20are%20eligible%20to%20borrow%20the%20Federal%20Direct%20Unsubsidized%20loan%20for%20up%20to%20%2450%2C000%20per%20year." target="_blank" rel="noopener">Professional Degree Program Loan Limits | Office of Scholarships &amp; Financial Aid (opens at the highlighted sentence)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>Page rendered without its styling (plain serif text, no site layout). The page links to a list of programs (&#x27;temporarily expanding the number of programs&#x27;) which was not opened. Undated. Accordion answers below the frame were not read. The frame begins with an empty blue header band and has no section heading above the paragraph.</p></div>
+</article>
+<article class="example" id="shasta-college-no-limit" aria-labelledby="shasta-college-no-limit-h">
+<h3 id="shasta-college-no-limit-h">Shasta College, California</h3>
+<ul class="tags"><li>Offers the full federal amount</li></ul>
+<p class="headline">Shasta College says it has not set any loan limit below the federal limits.</p>
+<p class="explain">Shasta College&#x27;s 2026-27 loan page notes that colleges may set lower loan limits by program of study. It states that Shasta does not currently have any limit lower than the federal limits.</p>
+<figure class="shot"><a class="shot-link" style="max-width:936px" href="shots/shasta-college-no-limit.png" aria-label="Open the screenshot larger"><img src="shots/shasta-college-no-limit.png" width="1844" height="734" alt="Screenshot of the source page. Shasta College says it has not set any loan limit below the federal limits." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>Colleges are allowed to, but not required to, set lower annual loan borrowing limits by program of study. Shasta College does not currently have a loan limit that is less than the federally allowed limits.</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>All students</dd><dt>Amount or terms</dt><dd>No institutional limit below the federal maximums</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.shastacollege.edu/cost-financial-aid/types-of-financial-aid/federal-direct-loans/direct-loan-updates-changes/#:~:text=Colleges%20are%20allowed%20to%2C%20but%20not%20required%20to%2C%20set%20lower%20annual%20loan%20borrowing%20limits%20by%20program%20of%20study.%20Shasta%20College%20does%20not%20currently%20have%20a%20loan%20limit%20that%20is%20less%20than%20the%20federally%20allowed%20limits." target="_blank" rel="noopener">Direct Loan Updates &amp; Changes | Shasta College (opens at the highlighted sentence)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>Undated; the word &#x27;currently&#x27; means the statement could change.</p></div>
+</article>
+<article class="example" id="parker-university-chiropractic" aria-labelledby="parker-university-chiropractic-h">
+<h3 id="parker-university-chiropractic-h">Parker University</h3>
+<ul class="tags"><li>Offers the full federal amount</li></ul>
+<p class="headline">Parker University lists $50,000 a year for chiropractic students under the federal rules.</p>
+<p class="explain">Parker&#x27;s page has a table of borrowing limits that gives chiropractic (DC) students a $50,000 annual limit, which is the federal professional limit. The page restates the federal figure and does not describe a choice by the school. It is shown as a contrast to Palmer College of Chiropractic, which lists $20,000 per term.</p>
+<figure class="shot"><a class="shot-link" style="max-width:685px" href="shots/parker-university.png" aria-label="Open the screenshot larger"><img src="shots/parker-university.png" width="1342" height="1038" alt="Screenshot of the source page. Parker University lists $50,000 a year for chiropractic students under the federal rules." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>$50,000 annual loan limit</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>Doctor of Chiropractic (labelled &#x27;DC Students&#x27;) and graduate students</dd><dt>Amount or terms</dt><dd>DC students: $50,000 annual loan limit, $200,000 aggregate; graduate students: $20,500 annual, $100,000 aggregate (non-legacy limits effective 7/1/26)</dd><dt>Date on the page</dt><dd>This section was last updated November 20, 2026</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.parker.edu/federal-loan-changes/#:~:text=%2450%2C000%20annual%20loan%20limit" target="_blank" rel="noopener">Federal Loan Changes - Parker University (opens at the highlighted sentence)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>Judgement call: if the team wants Parker as a contrast to Palmer, &#x27;offers the full amount&#x27; could be argued, but the page only restates federal limits. Frame is a table with the left column cut off; the table&#x27;s row heading &#x27;Non-Legacy Borrowing Limits (eff. 7/1/26)&#x27; and &#x27;DC Students&#x27; are in frame. Page text elsewhere says final federal guidance is pending. The page restates the federal figure for chiropractic students and does not describe a choice by the school. It is in the gallery as a contrast to Palmer College of Chiropractic&#x27;s $20,000 per term. The screenshot shows the right-hand part of a table; the table&#x27;s left column is cut off by the frame, but the row labels &quot;Non-Legacy Borrowing Limits (eff. 7/1/26)&quot; and &quot;DC Students&quot; are visible.</p></div>
+</article>
+<article class="example" id="yale-sofi-loan-option" aria-labelledby="yale-sofi-loan-option-h">
+<h3 id="yale-sofi-loan-option-h">Yale University (graduate and professional students), Connecticut</h3>
+<ul class="tags"><li>Private lender, no school money</li></ul>
+<p class="headline">Yale points students to SoFi as its first Grad PLUS alternative and says it does not endorse any lender.</p>
+<p class="explain">Yale&#x27;s financial aid office says it is exploring financing options comparable to or better than Grad PLUS and that the first is available through SoFi. Students may apply with SoFi or other lenders from 2026-27. Yale states it does not endorse, recommend or promote SoFi or the other lenders, so this is a lender arrangement, not school lending.</p>
+<figure class="shot"><a class="shot-link" style="max-width:942px" href="shots/yale-sofi-loan-option.png" aria-label="Open the screenshot larger"><img src="shots/yale-sofi-loan-option.png" width="1856" height="1234" alt="Screenshot of the source page. Yale points students to SoFi as its first Grad PLUS alternative and says it does not endorse any lender." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>The first such offering is available through SoFi.</p><p>Yale does not endorse, recommend, or promote SoFi or any of the lenders included in ELM Select.</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>Yale graduate and professional students beginning with the 2026-2027 academic year</dd><dt>Amount or terms</dt><dd>Stated in a collapsed FAQ item: SoFi offers qualifying Yale graduate and professional students interest rates from 3.49% to 7.99% and no origination fee; federal unsubsidized rate 7.94% with a 1.057% origination fee; SoFi and several other lenders allow borrowing up to the full cost of attendance</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://financialaid.yale.edu/yales-graduate-professional-student-loan-option#:~:text=The%20first%20such%20offering%20is%20available%20through%20SoFi." target="_blank" rel="noopener">Yale&#x27;s Graduate &amp; Professional Student Loan Option | University Financial Aid (opens at the highlighted sentence)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>No school money, guarantee or risk share appears on the page; classification is from the page&#x27;s own text. The page is undated. The two highlighted passages are visible; the rate text is in a collapsed FAQ item. Retaken 2026-11-24. The frame shows the page text without the page title or banner; the interest-rate FAQ is not in the frame.</p></div>
+</article>
+<article class="example" id="vcom-south-carolina-student-loan" aria-labelledby="vcom-south-carolina-student-loan-h">
+<h3 id="vcom-south-carolina-student-loan-h">Edward Via College of Osteopathic Medicine (VCOM), Virginia, South Carolina, Alabama and Louisiana</h3>
+<ul class="tags"><li>Private lender, no school money</li></ul>
+<p class="headline">VCOM teamed with a South Carolina nonprofit lender; the page says VCOM does not make the loan.</p>
+<p class="explain">VCOM says it worked with South Carolina Student Loan Corp. to give students an alternative as new federal professional loan limits start July 1, 2026. The release states that the loan is made by the lender, not by VCOM. Students can be approved with a FICO score of 600 or higher, which VCOM attributes to its graduates&#x27; low federal non-repayment rate.</p>
+<figure class="shot"><a class="shot-link" style="max-width:816px" href="shots/vcom-south-carolina-student-loan.png" aria-label="Open the screenshot larger"><img src="shots/vcom-south-carolina-student-loan.png" width="1604" height="1240" alt="Screenshot of the source page. VCOM teamed with a South Carolina nonprofit lender; the page says VCOM does not make the loan." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>The Professional Graduate Loan is not being offered or made by VCOM, but by SCSLC.</p><p>VCOM students can be approved for loans with a FICO score of 600 or higher</p></blockquote>
+<dl class="facts"><dt>Programs covered</dt><dd>VCOM medical students (the release mentions students starting medical school in July 2026 who face the $200,000 federal professional limit)</dd><dt>Amount or terms</dt><dd>Loan made by South Carolina Student Loan Corp. (SCSLC): professional graduate student loan rates starting at 3%, not exceeding 13%; approval with a FICO score of 600 or higher; 5-, 10- and 15-year repayment terms; cosigner options; 6-month grace period; up to 48 months of deferred payments during residency. The $350,000 aggregate limit does not appear on this page.</dd><dt>Date on the page</dt><dd>April 2, 2026 (release dateline; URL dated 2026/04/06)</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.vcom.edu/news/2026/04/06/edward-college-osteopathic-medicine-and-south-carolina-student-loan-team-help-students-impacted-new#:~:text=The%20Professional%20Graduate%20Loan%20is%20not%20being%20offered%20or%20made%20by%20VCOM%2C%20but%20by%20SCSLC." target="_blank" rel="noopener">Edward Via College of Osteopathic Medicine and South Carolina Student Loan team up to help students impacted by new federal loan caps | VCOM (opens at the highlighted sentence)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<p class="source-note">If your browser does not highlight the sentence, search the page for the quoted text above.</p>
+<div class="caveats"><h4>Caveats</h4><p>Page says explicitly the loan is not made by VCOM; no school funding, guarantee or risk sharing is stated. The page notes students may choose any lender. Retaken 2026-11-24 with the styled page; the page headline is above the frame. The page labels its campuses Virginia, Carolinas, Auburn and Louisiana; the state names are given in words from that list (the Carolinas campus is in South Carolina, Auburn in Alabama).</p></div>
+</article>
+<article class="example" id="cleveland-university-kc-dc" aria-labelledby="cleveland-university-kc-dc-h">
+<h3 id="cleveland-university-kc-dc-h">Cleveland University-Kansas City, Kansas</h3>
+<ul class="tags"><li>Offers the full federal amount</li></ul>
+<p class="headline">Cleveland University-Kansas City lists the full $50,000 a year for chiropractic, with the same two-trimester year and ten-trimester program as Palmer.</p>
+<p class="explain">Cleveland says new Doctor of Chiropractic students can borrow up to $50,000 a year, which is the federal maximum, and defines a financial-aid year as two trimesters. The program is ten trimesters, which is five academic years. At $50,000 a year that would be $250,000, more than the $200,000 total, so late-program students may reach the total before finishing; that sum is this project&#x27;s arithmetic, not a Cleveland statement.</p>
+<figure class="shot"><a class="shot-link" style="max-width:1015px" href="shots/cleveland-university-kc-dc.png" aria-label="Open the screenshot larger"><img src="shots/cleveland-university-kc-dc.png" width="2002" height="4000" alt="Screenshot of the source page. Cleveland University-Kansas City lists the full $50,000 a year for chiropractic, with the same two-trimester year and ten-trimester program as Palmer." loading="lazy"></a><figcaption class="shot-hint">The key sentence is highlighted in yellow. Select the image to enlarge it.</figcaption></figure>
+<p class="quote-label">Highlighted text, as written on the page</p>
+<blockquote><p>Doctor of Chiropractic: Up to $50,000/year</p><p>For the purpose of financial aid, an academic year consists of 2 trimesters.</p></blockquote>
+<p class="find"><strong>How to see it on the page:</strong> Open the FAQ item &quot;What is an academic year?&quot; lower on the page; the $50,000/year line is in the open section &quot;New Graduate and Doctor of Chiropractic Students&quot;.</p>
+<dl class="facts"><dt>Programs covered</dt><dd>Doctor of Chiropractic (new students starting after July 1, 2026)</dd><dt>Amount or terms</dt><dd>Up to $50,000/year; $200,000 lifetime for DC students</dd></dl>
+<p class="source"><strong>Source:</strong> <a href="https://www.cleveland.edu/admissions/financial-aid-scholarships/federal-changes-ob3/" target="_blank" rel="noopener">Changes to Federal Loans for 2026-27 | Cleveland University-Kansas City (opens the page; the sentence is inside a collapsed section, see above)</a> (The school&#x27;s own page, captured 2026-11-24)</p>
+<div class="caveats"><h4>Caveats</h4><p>Shown as a contrast to Palmer College of Chiropractic, which lists $20,000 per term for a program with the same structure. School&#x27;s words: the $50,000/year line, the lifetime $200,000, &#x27;10 trimesters&#x27; (FAQ &#x27;expected time to complete&#x27;) and the academic-year definition (both FAQ items are collapsed). Arithmetic is the project&#x27;s: 10 trimesters / 2 = 5 years; 5 x $50,000 = $250,000 vs $200,000. The page does not itself say loans may run out. The page loads without some styles/scripts (bootstrapcdn blocked) but the screenshot renders normally. Page is undated.</p></div>
+</article>
+</section>
+<section class="notshown" id="not-shown" aria-labelledby="not-shown-h"><h2 id="not-shown-h">Checked and not shown</h2>
+<ul>
+<li><strong>Illinois Central College</strong>: The college&#x27;s page could not be opened for capture, so its wording was not confirmed.</li>
+<li><strong>Broward College</strong>: The college&#x27;s page could not be opened, and the policy it describes dates from 2012, so it is not a response to the 2026 limits.</li>
+<li><strong>University of Iowa</strong>: The university&#x27;s page only restates the federal rules and lists no program-specific limit.</li>
+<li><strong>University of Utah (Doctor of Physical Therapy)</strong>: The university&#x27;s page could not be opened.</li>
+<li><strong>Wilson Community College</strong>: The college&#x27;s page announcing that it left the federal loan program has been removed, and no other page on its site says so.</li>
+<li><strong>West Virginia School of Osteopathic Medicine</strong>: The news article could not be opened, and the school&#x27;s own pages do not mention a partnership with private lenders.</li>
+<li><strong>Southern California University of Health Sciences</strong>: Southern California University of Health Sciences lists $25,000 per term, which it totals at $75,000 a year.</li>
+<li><strong>Keiser University</strong>: Keiser University lists the full $50,000 a year federal limit for professional students.</li>
+<li><strong>University of Western States</strong>: University of Western States lists the full $50,000 a year federal limit for professional students, chiropractic included.</li>
+<li><strong>Texas Chiropractic College</strong>: Texas Chiropractic College&#x27;s catalog pages give no federal loan dollar limit.</li>
+<li><strong>Sherman College of Chiropractic</strong>: Sherman College of Chiropractic&#x27;s pages could not be read, so no loan statement was established.</li>
+<li><strong>University of Bridgeport</strong>: University of Bridgeport&#x27;s pages could not be read, so no loan statement was established.</li>
+<li><strong>D&#x27;Youville University</strong>: D&#x27;Youville&#x27;s catalog host is blocked, so no loan statement was established.</li>
+<li><strong>St. George&#x27;s University</strong>: St. George&#x27;s University states the full $50,000 a year federal cap and says the limits are set by law.</li>
+<li><strong>Logan University</strong>: Logan lists the full $50,000 federal annual maximum for new Doctor of Chiropractic students.</li>
+<li><strong>Life University</strong>: Life University lists $50,000 for a three-quarter year for new Doctor of Chiropractic students, the full federal amount.</li>
+<li><strong>Life Chiropractic College West</strong>: Life West&#x27;s loan-change page could not be opened, so nothing is confirmed.</li>
+<li><strong>Northeast College of Health Sciences</strong>: Northeast&#x27;s 2026-27 graduate catalog states the full $50,000 a year, defining a year as two trimesters.</li>
+<li><strong>Ross University School of Medicine</strong>: Ross Medicine lists the full $50,000 annual federal limit for professional students.</li>
+<li><strong>Ross University School of Veterinary Medicine</strong>: Ross Veterinary states the full $50,000 a year, defined as a two-semester academic year.</li>
+<li><strong>American University of the Caribbean School of Medicine</strong>: AUC lists the full $50,000 annual federal limit for professional students.</li>
+<li><strong>New England College of Optometry</strong>: New England College of Optometry states the full $50,000 a year for its professional program.</li>
+<li><strong>University of Maryland, Baltimore</strong>: UMB lets eligible graduate nursing students borrow up to $50,000 a year under the temporary court-stay relief.</li>
+<li><strong>University of Michigan-Flint</strong>: Could not read University of Michigan-Flint&#x27;s page; it is behind a Cloudflare challenge.</li>
+<li><strong>Southwestern Community College (North Carolina)</strong>: Could not read Southwestern Community College&#x27;s page; the host is blocked from this container.</li>
+<li><strong>University of South Florida (USF Health)</strong>: USF Health&#x27;s physical therapy page lists $20,500 loan limits as the result of federal rules, not a school decision.</li>
+<li><strong>Louisiana State University (Baton Rouge)</strong>: LSU&#x27;s loan page restates federal limits and names only three professional programs; no school-set cap.</li>
+<li><strong>University of Michigan (Ann Arbor)</strong>: Could not read the University of Michigan page; it returned a bot-check page.</li>
+<li><strong>University of Montana</strong>: Montana&#x27;s loan page shows an older $33,000 health-program table, not a 2026-27 school limit.</li>
+<li><strong>University of Nebraska Medical Center</strong>: UNMC&#x27;s page, current as of February 2026, restates the federal split between graduate and professional programs.</li>
+<li><strong>Kent State University</strong>: Kent State&#x27;s page applies the professional limit to two programs and notes federal rulemaking is ongoing.</li>
+<li><strong>Pepperdine University (College of Health Science, Speech-Language Pathology)</strong>: Pepperdine&#x27;s pre-July 2026 page describes the new federal graduate limit and the end of Grad PLUS for new borrowers.</li>
+<li><strong>Simmons University (online MSN and DNP)</strong>: Simmons&#x27; page, last updated June 4, 2026, describes the federal limits for nursing students.</li>
+</ul>
+</section></main></div></div>
+<dialog id="lightbox" aria-label="Enlarged screenshot"><div class="dlg-bar"><button type="button" id="lightbox-close">Close</button></div><div class="dlg-body"><img id="lightbox-img" alt="" src=""></div></dialog>
+<script>
+(function(){
+  var root=document.getElementById('gallery');
+  if(!root)return;
+  var items=Array.prototype.slice.call(root.querySelectorAll('article.example'));
+  if(!items.length)return;
+  var groups=Array.prototype.slice.call(root.querySelectorAll('section.group'));
+  var bar=document.getElementById('viewer-bar');
+  var prev=document.getElementById('prev-btn'),next=document.getElementById('next-btn');
+  var posEl=document.getElementById('position');
+  var toggle=document.getElementById('show-all');
+  var sel=document.getElementById('index-select');
+  var selWrap=document.getElementById('index-select-wrap');
+  var links=Array.prototype.slice.call(root.querySelectorAll('.index a[data-id]'));
+  var dlg=document.getElementById('lightbox');
+  var ns=document.getElementById('not-shown');
+  var N=items.length;
+  var cur=0,all=false;
+  function curEl(){return cur===N?ns:items[cur];}
+  function curId(){return cur===N?'not-shown':items[cur].id;}
+  bar.hidden=false;selWrap.hidden=false;
+  function idxOf(id){if(id==='not-shown'&&ns)return N;for(var i=0;i<items.length;i++){if(items[i].id===id)return i;}return -1;}
+  function render(){
+    items.forEach(function(a,i){a.hidden=!all&&i!==cur;});
+    groups.forEach(function(g){
+      var any=false;
+      Array.prototype.forEach.call(g.querySelectorAll('article.example'),function(a){if(!a.hidden)any=true;});
+      g.hidden=!any;
+    });
+    if(ns)ns.hidden=!all&&cur!==N;
+    posEl.textContent=cur===N?'Checked and not shown':(cur+1)+' of '+N;
+    prev.disabled=cur===0;next.disabled=cur===N||(cur===N-1&&!ns);
+    prev.hidden=next.hidden=posEl.hidden=all;
+    links.forEach(function(l){if(l.getAttribute('data-id')===curId()){l.setAttribute('aria-current','true');}else{l.removeAttribute('aria-current');}});
+    sel.value=curId();
+  }
+  function scrollTop(){
+    var el=document.getElementById('viewer');
+    if(el&&el.getBoundingClientRect().top<0)el.scrollIntoView({block:'start'});
+  }
+  function go(i,setHash){
+    if(i<0||i>N||(i===N&&!ns))return;
+    cur=i;render();
+    if(setHash&&location.hash!=='#'+curId()){location.hash=curId();}
+    if(all){curEl().scrollIntoView({block:'start'});}else{scrollTop();}
+  }
+  function fromHash(){
+    var id=decodeURIComponent(location.hash.replace(/^#/,''));
+    var i=idxOf(id);
+    if(i<0)return false;
+    cur=i;render();
+    if(all)curEl().scrollIntoView({block:'start'});else scrollTop();
+    return true;
+  }
+  prev.addEventListener('click',function(){go(cur-1,true);});
+  next.addEventListener('click',function(){go(cur+1,true);});
+  links.forEach(function(l){l.addEventListener('click',function(e){e.preventDefault();go(idxOf(l.getAttribute('data-id')),true);});});
+  sel.addEventListener('change',function(){go(idxOf(sel.value),true);});
+  toggle.addEventListener('change',function(){
+    all=toggle.checked;
+    try{localStorage.setItem('llg-show-all',all?'1':'0');}catch(e){}
+    render();
+    if(all)curEl().scrollIntoView({block:'start'});
+  });
+  window.addEventListener('hashchange',fromHash);
+  document.addEventListener('keydown',function(e){
+    if(e.defaultPrevented||e.altKey||e.ctrlKey||e.metaKey||e.shiftKey)return;
+    if(dlg&&dlg.open)return;
+    var t=e.target&&e.target.tagName;
+    if(t==='INPUT'||t==='SELECT'||t==='TEXTAREA')return;
+    if(all)return;
+    if(e.key==='ArrowRight'){go(cur+1,true);e.preventDefault();}
+    else if(e.key==='ArrowLeft'){go(cur-1,true);e.preventDefault();}
+  });
+  var dImg=document.getElementById('lightbox-img'),dClose=document.getElementById('lightbox-close');
+  var opener=null;
+  root.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a.shot-link');
+    if(!a||!dlg||typeof dlg.showModal!=='function')return;
+    e.preventDefault();
+    var im=a.querySelector('img');
+    dImg.src=im.getAttribute('src');dImg.alt=im.getAttribute('alt');
+    var nw=+im.getAttribute('width');dImg.width=nw;dImg.height=im.getAttribute('height');dlg.style.width='min(96vw,'+(nw+40)+'px)';dImg.style.maxWidth=nw+'px';
+    opener=a;dlg.showModal();
+  });
+  dClose.addEventListener('click',function(){dlg.close();});
+  dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close();});
+  dlg.addEventListener('close',function(){if(opener)opener.focus();});
+  try{if(localStorage.getItem('llg-show-all')==='1'){all=true;toggle.checked=true;}}catch(e){}
+  if(!fromHash()){cur=0;render();}
+})();
+</script>
+</body>
+</html>
